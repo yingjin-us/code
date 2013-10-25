@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WMSModelStoreContainer" CdmEntityContainer="WMSEntities">
+    <EntitySetMapping Name="ProposalRounds">
+      <EntityTypeMapping TypeName="WMSModel.ProposalRound">
+        <MappingFragment StoreEntitySet="ProposalRounds">
+          <ScalarProperty Name="WPN" ColumnName="WPN" />
+          <ScalarProperty Name="RoundNumber" ColumnName="RoundNumber" />
+          <ScalarProperty Name="ContractTypeCode" ColumnName="ContractTypeCode" />
+          <ScalarProperty Name="PMCode" ColumnName="PMCode" />
+          <ScalarProperty Name="PECode" ColumnName="PECode" />
+          <ScalarProperty Name="PSCode" ColumnName="PSCode" />
+          <ScalarProperty Name="IsWestatPrime" ColumnName="IsWestatPrime" />
+          <ScalarProperty Name="WestatSubTo" ColumnName="WestatSubTo" />
+          <ScalarProperty Name="Subcontractors" ColumnName="Subcontractors" />
+          <ScalarProperty Name="Consultants" ColumnName="Consultants" />
+          <ScalarProperty Name="Vendors" ColumnName="Vendors" />
+          <ScalarProperty Name="RoundTypeCode" ColumnName="RoundTypeCode" />
+          <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+          <ScalarProperty Name="PrimaryDeliveryModeCode" ColumnName="PrimaryDeliveryModeCode" />
+          <ScalarProperty Name="DeliveryConfirmedDate" ColumnName="DeliveryConfirmedDate" />
+          <ScalarProperty Name="DuePlace" ColumnName="DuePlace" />
+          <ScalarProperty Name="SDBPartPlanRequired" ColumnName="SDBPartPlanRequired" />
+          <ScalarProperty Name="SBSubContractPlanRequired" ColumnName="SBSubContractPlanRequired" />
+          <ScalarProperty Name="NAICS_SIC_Code" ColumnName="NAICS_SIC_Code" />
+          <ScalarProperty Name="BidAmount" ColumnName="BidAmount" />
+          <ScalarProperty Name="BidFeePercent" ColumnName="BidFeePercent" />
+          <ScalarProperty Name="RateDiscount" ColumnName="RateDiscount" />
+          <ScalarProperty Name="SBPercentOfContract" ColumnName="SBPercentOfContract" />
+          <ScalarProperty Name="SBPercentOfOutsourcing" ColumnName="SBPercentOfOutsourcing" />
+          <ScalarProperty Name="ExpectedContractStartDate" ColumnName="ExpectedContractStartDate" />
+          <ScalarProperty Name="ExpectedContractEndDate" ColumnName="ExpectedContractEndDate" />
+          <ScalarProperty Name="RoundStatusCode" ColumnName="RoundStatusCode" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="DueTime" ColumnName="DueTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proposals">
+      <EntityTypeMapping TypeName="WMSModel.Proposal">
+        <MappingFragment StoreEntitySet="Proposals">
+          <ScalarProperty Name="WPN" ColumnName="WPN" />
+          <ScalarProperty Name="LastRoundNumber" ColumnName="LastRoundNumber" />
+          <ScalarProperty Name="RFP_Number" ColumnName="RFP_Number" />
+          <ScalarProperty Name="ProposalStatusCode" ColumnName="ProposalStatusCode" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

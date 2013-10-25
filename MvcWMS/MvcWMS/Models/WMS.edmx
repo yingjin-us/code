@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="WMSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="WMSModelStoreContainer">
+          <EntitySet Name="ProposalRounds" EntityType="WMSModel.Store.ProposalRounds" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Proposals" EntityType="WMSModel.Store.Proposals" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="ProposalRounds">
+          <Key>
+            <PropertyRef Name="WPN" />
+            <PropertyRef Name="RoundNumber" />
+          </Key>
+          <Property Name="WPN" Type="nchar" Nullable="false" MaxLength="12" />
+          <Property Name="RoundNumber" Type="smallint" Nullable="false" />
+          <Property Name="ContractTypeCode" Type="nvarchar" MaxLength="5" />
+          <Property Name="PMCode" Type="nvarchar" MaxLength="3" />
+          <Property Name="PECode" Type="nvarchar" MaxLength="3" />
+          <Property Name="PSCode" Type="nvarchar" MaxLength="3" />
+          <Property Name="IsWestatPrime" Type="char" MaxLength="1" />
+          <Property Name="WestatSubTo" Type="nvarchar" MaxLength="50" />
+          <Property Name="Subcontractors" Type="nvarchar" MaxLength="80" />
+          <Property Name="Consultants" Type="nvarchar" MaxLength="80" />
+          <Property Name="Vendors" Type="nvarchar" MaxLength="80" />
+          <Property Name="RoundTypeCode" Type="nvarchar" MaxLength="6" />
+          <Property Name="DueDate" Type="datetime" />
+          <Property Name="PrimaryDeliveryModeCode" Type="nvarchar" MaxLength="4" />
+          <Property Name="DeliveryConfirmedDate" Type="datetime" />
+          <Property Name="DuePlace" Type="nvarchar" MaxLength="255" />
+          <Property Name="SDBPartPlanRequired" Type="char" MaxLength="1" />
+          <Property Name="SBSubContractPlanRequired" Type="char" MaxLength="1" />
+          <Property Name="NAICS_SIC_Code" Type="nvarchar" MaxLength="15" />
+          <Property Name="BidAmount" Type="numeric" />
+          <Property Name="BidFeePercent" Type="numeric" />
+          <Property Name="RateDiscount" Type="numeric" />
+          <Property Name="SBPercentOfContract" Type="numeric" />
+          <Property Name="SBPercentOfOutsourcing" Type="numeric" />
+          <Property Name="ExpectedContractStartDate" Type="datetime" />
+          <Property Name="ExpectedContractEndDate" Type="datetime" />
+          <Property Name="RoundStatusCode" Type="nvarchar" MaxLength="5" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="LastUpdate" Type="datetime" />
+          <Property Name="UpdatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="DueTime" Type="nvarchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="Proposals">
+          <Key>
+            <PropertyRef Name="WPN" />
+          </Key>
+          <Property Name="WPN" Type="nchar" Nullable="false" MaxLength="12" />
+          <Property Name="LastRoundNumber" Type="smallint" Nullable="false" />
+          <Property Name="RFP_Number" Type="nvarchar" Nullable="false" MaxLength="26" />
+          <Property Name="ProposalStatusCode" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdate" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedBy" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WMSModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="WMSEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="ProposalRounds" EntityType="WMSModel.ProposalRound" />
+          <EntitySet Name="Proposals" EntityType="WMSModel.Proposal" />
+        </EntityContainer>
+        <EntityType Name="ProposalRound">
+          <Key>
+            <PropertyRef Name="WPN" />
+            <PropertyRef Name="RoundNumber" />
+          </Key>
+          <Property Name="WPN" Type="String" Nullable="false" MaxLength="12" Unicode="true" FixedLength="true" />
+          <Property Name="RoundNumber" Type="Int16" Nullable="false" />
+          <Property Name="ContractTypeCode" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="PMCode" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="PECode" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="PSCode" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="IsWestatPrime" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="WestatSubTo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Subcontractors" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+          <Property Name="Consultants" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+          <Property Name="Vendors" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+          <Property Name="RoundTypeCode" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="DueDate" Type="DateTime" Precision="3" />
+          <Property Name="PrimaryDeliveryModeCode" Type="String" MaxLength="4" Unicode="true" FixedLength="false" />
+          <Property Name="DeliveryConfirmedDate" Type="DateTime" Precision="3" />
+          <Property Name="DuePlace" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="SDBPartPlanRequired" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="SBSubContractPlanRequired" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="NAICS_SIC_Code" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="BidAmount" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="BidFeePercent" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="RateDiscount" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SBPercentOfContract" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SBPercentOfOutsourcing" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ExpectedContractStartDate" Type="DateTime" Precision="3" />
+          <Property Name="ExpectedContractEndDate" Type="DateTime" Precision="3" />
+          <Property Name="RoundStatusCode" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdate" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DueTime" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Proposal">
+          <Key>
+            <PropertyRef Name="WPN" />
+          </Key>
+          <Property Name="WPN" Type="String" Nullable="false" MaxLength="12" Unicode="true" FixedLength="true" />
+          <Property Name="LastRoundNumber" Type="Int16" Nullable="false" />
+          <Property Name="RFP_Number" Type="String" Nullable="false" MaxLength="26" Unicode="true" FixedLength="false" />
+          <Property Name="ProposalStatusCode" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastUpdate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedBy" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WMSModelStoreContainer" CdmEntityContainer="WMSEntities">
+          <EntitySetMapping Name="ProposalRounds">
+            <EntityTypeMapping TypeName="WMSModel.ProposalRound">
+              <MappingFragment StoreEntitySet="ProposalRounds">
+                <ScalarProperty Name="WPN" ColumnName="WPN" />
+                <ScalarProperty Name="RoundNumber" ColumnName="RoundNumber" />
+                <ScalarProperty Name="ContractTypeCode" ColumnName="ContractTypeCode" />
+                <ScalarProperty Name="PMCode" ColumnName="PMCode" />
+                <ScalarProperty Name="PECode" ColumnName="PECode" />
+                <ScalarProperty Name="PSCode" ColumnName="PSCode" />
+                <ScalarProperty Name="IsWestatPrime" ColumnName="IsWestatPrime" />
+                <ScalarProperty Name="WestatSubTo" ColumnName="WestatSubTo" />
+                <ScalarProperty Name="Subcontractors" ColumnName="Subcontractors" />
+                <ScalarProperty Name="Consultants" ColumnName="Consultants" />
+                <ScalarProperty Name="Vendors" ColumnName="Vendors" />
+                <ScalarProperty Name="RoundTypeCode" ColumnName="RoundTypeCode" />
+                <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+                <ScalarProperty Name="PrimaryDeliveryModeCode" ColumnName="PrimaryDeliveryModeCode" />
+                <ScalarProperty Name="DeliveryConfirmedDate" ColumnName="DeliveryConfirmedDate" />
+                <ScalarProperty Name="DuePlace" ColumnName="DuePlace" />
+                <ScalarProperty Name="SDBPartPlanRequired" ColumnName="SDBPartPlanRequired" />
+                <ScalarProperty Name="SBSubContractPlanRequired" ColumnName="SBSubContractPlanRequired" />
+                <ScalarProperty Name="NAICS_SIC_Code" ColumnName="NAICS_SIC_Code" />
+                <ScalarProperty Name="BidAmount" ColumnName="BidAmount" />
+                <ScalarProperty Name="BidFeePercent" ColumnName="BidFeePercent" />
+                <ScalarProperty Name="RateDiscount" ColumnName="RateDiscount" />
+                <ScalarProperty Name="SBPercentOfContract" ColumnName="SBPercentOfContract" />
+                <ScalarProperty Name="SBPercentOfOutsourcing" ColumnName="SBPercentOfOutsourcing" />
+                <ScalarProperty Name="ExpectedContractStartDate" ColumnName="ExpectedContractStartDate" />
+                <ScalarProperty Name="ExpectedContractEndDate" ColumnName="ExpectedContractEndDate" />
+                <ScalarProperty Name="RoundStatusCode" ColumnName="RoundStatusCode" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="DueTime" ColumnName="DueTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Proposals">
+            <EntityTypeMapping TypeName="WMSModel.Proposal">
+              <MappingFragment StoreEntitySet="Proposals">
+                <ScalarProperty Name="WPN" ColumnName="WPN" />
+                <ScalarProperty Name="LastRoundNumber" ColumnName="LastRoundNumber" />
+                <ScalarProperty Name="RFP_Number" ColumnName="RFP_Number" />
+                <ScalarProperty Name="ProposalStatusCode" ColumnName="ProposalStatusCode" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

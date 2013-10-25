@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WMSModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="WMSEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="ProposalRounds" EntityType="WMSModel.ProposalRound" />
+    <EntitySet Name="Proposals" EntityType="WMSModel.Proposal" />
+  </EntityContainer>
+  <EntityType Name="ProposalRound">
+    <Key>
+      <PropertyRef Name="WPN" />
+      <PropertyRef Name="RoundNumber" />
+    </Key>
+    <Property Name="WPN" Type="String" Nullable="false" MaxLength="12" Unicode="true" FixedLength="true" />
+    <Property Name="RoundNumber" Type="Int16" Nullable="false" />
+    <Property Name="ContractTypeCode" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+    <Property Name="PMCode" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+    <Property Name="PECode" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+    <Property Name="PSCode" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+    <Property Name="IsWestatPrime" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="WestatSubTo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Subcontractors" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="Consultants" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="Vendors" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="RoundTypeCode" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+    <Property Name="DueDate" Type="DateTime" Precision="3" />
+    <Property Name="PrimaryDeliveryModeCode" Type="String" MaxLength="4" Unicode="true" FixedLength="false" />
+    <Property Name="DeliveryConfirmedDate" Type="DateTime" Precision="3" />
+    <Property Name="DuePlace" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="SDBPartPlanRequired" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="SBSubContractPlanRequired" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="NAICS_SIC_Code" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="BidAmount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="BidFeePercent" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="RateDiscount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="SBPercentOfContract" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="SBPercentOfOutsourcing" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ExpectedContractStartDate" Type="DateTime" Precision="3" />
+    <Property Name="ExpectedContractEndDate" Type="DateTime" Precision="3" />
+    <Property Name="RoundStatusCode" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DueTime" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Proposal">
+    <Key>
+      <PropertyRef Name="WPN" />
+    </Key>
+    <Property Name="WPN" Type="String" Nullable="false" MaxLength="12" Unicode="true" FixedLength="true" />
+    <Property Name="LastRoundNumber" Type="Int16" Nullable="false" />
+    <Property Name="RFP_Number" Type="String" Nullable="false" MaxLength="26" Unicode="true" FixedLength="false" />
+    <Property Name="ProposalStatusCode" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastUpdate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+</Schema>

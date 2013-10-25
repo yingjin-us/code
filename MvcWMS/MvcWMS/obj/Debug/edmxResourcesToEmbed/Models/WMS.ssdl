@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WMSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="WMSModelStoreContainer">
+    <EntitySet Name="ProposalRounds" EntityType="WMSModel.Store.ProposalRounds" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Proposals" EntityType="WMSModel.Store.Proposals" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="ProposalRounds">
+    <Key>
+      <PropertyRef Name="WPN" />
+      <PropertyRef Name="RoundNumber" />
+    </Key>
+    <Property Name="WPN" Type="nchar" Nullable="false" MaxLength="12" />
+    <Property Name="RoundNumber" Type="smallint" Nullable="false" />
+    <Property Name="ContractTypeCode" Type="nvarchar" MaxLength="5" />
+    <Property Name="PMCode" Type="nvarchar" MaxLength="3" />
+    <Property Name="PECode" Type="nvarchar" MaxLength="3" />
+    <Property Name="PSCode" Type="nvarchar" MaxLength="3" />
+    <Property Name="IsWestatPrime" Type="char" MaxLength="1" />
+    <Property Name="WestatSubTo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Subcontractors" Type="nvarchar" MaxLength="80" />
+    <Property Name="Consultants" Type="nvarchar" MaxLength="80" />
+    <Property Name="Vendors" Type="nvarchar" MaxLength="80" />
+    <Property Name="RoundTypeCode" Type="nvarchar" MaxLength="6" />
+    <Property Name="DueDate" Type="datetime" />
+    <Property Name="PrimaryDeliveryModeCode" Type="nvarchar" MaxLength="4" />
+    <Property Name="DeliveryConfirmedDate" Type="datetime" />
+    <Property Name="DuePlace" Type="nvarchar" MaxLength="255" />
+    <Property Name="SDBPartPlanRequired" Type="char" MaxLength="1" />
+    <Property Name="SBSubContractPlanRequired" Type="char" MaxLength="1" />
+    <Property Name="NAICS_SIC_Code" Type="nvarchar" MaxLength="15" />
+    <Property Name="BidAmount" Type="numeric" />
+    <Property Name="BidFeePercent" Type="numeric" />
+    <Property Name="RateDiscount" Type="numeric" />
+    <Property Name="SBPercentOfContract" Type="numeric" />
+    <Property Name="SBPercentOfOutsourcing" Type="numeric" />
+    <Property Name="ExpectedContractStartDate" Type="datetime" />
+    <Property Name="ExpectedContractEndDate" Type="datetime" />
+    <Property Name="RoundStatusCode" Type="nvarchar" MaxLength="5" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="LastUpdate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="DueTime" Type="nvarchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Proposals">
+    <Key>
+      <PropertyRef Name="WPN" />
+    </Key>
+    <Property Name="WPN" Type="nchar" Nullable="false" MaxLength="12" />
+    <Property Name="LastRoundNumber" Type="smallint" Nullable="false" />
+    <Property Name="RFP_Number" Type="nvarchar" Nullable="false" MaxLength="26" />
+    <Property Name="ProposalStatusCode" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+</Schema>
