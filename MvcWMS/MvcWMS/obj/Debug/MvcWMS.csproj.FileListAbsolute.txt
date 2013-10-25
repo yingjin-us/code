@@ -68,3 +68,9 @@ C:\code\MvcWMS\MvcWMS\bin\ko\System.Spatial.resources.dll
 C:\code\MvcWMS\MvcWMS\bin\ru\System.Spatial.resources.dll
 C:\code\MvcWMS\MvcWMS\bin\zh-Hans\System.Spatial.resources.dll
 C:\code\MvcWMS\MvcWMS\bin\zh-Hant\System.Spatial.resources.dll
+C:\code\MvcWMS\MvcWMS\bin\Autofac.dll
+C:\code\MvcWMS\MvcWMS\bin\Autofac.Integration.Mvc.dll
+C:\code\MvcWMS\MvcWMS\bin\Autofac.Integration.WebApi.dll
+C:\code\MvcWMS\MvcWMS\bin\Autofac.xml
+C:\code\MvcWMS\MvcWMS\bin\Autofac.Integration.Mvc.xml
+C:\code\MvcWMS\MvcWMS\bin\Autofac.Integration.WebApi.xml
