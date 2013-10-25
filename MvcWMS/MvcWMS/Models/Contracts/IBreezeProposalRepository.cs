@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MvcWMS.Models.Contracts
 {
-    interface IBreezeProposalRepository
+    public interface IBreezeProposalRepository
     {
         IQueryable Proposals { get; }
         String Metadata();
