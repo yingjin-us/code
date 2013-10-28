@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="dd6e39f3089441658d305585fe46ae8b" Name="Diagram1">
+      <Diagram DiagramId="dd6e39f3089441658d305585fe46ae8b" Name="Diagram1" ZoomLevel="94">
         <EntityTypeShape EntityType="WMSModel.ProposalRound" Width="4.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="WMSModel.Proposal" Width="3.375" PointX="7.875" PointY="1" IsExpanded="true" />
       </Diagram>
