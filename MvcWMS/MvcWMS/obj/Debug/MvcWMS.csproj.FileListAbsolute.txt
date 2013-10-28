@@ -27,7 +27,6 @@ C:\code\MvcWMS\MvcWMS\bin\System.Web.Razor.xml
 C:\code\MvcWMS\MvcWMS\bin\System.Web.WebPages.xml
 C:\code\MvcWMS\MvcWMS\bin\System.Web.WebPages.Deployment.xml
 C:\code\MvcWMS\MvcWMS\bin\System.Web.WebPages.Razor.xml
-C:\code\MvcWMS\MvcWMS\obj\Debug\MvcWMS.csprojResolveAssemblyReference.cache
 C:\code\MvcWMS\MvcWMS\obj\Debug\MvcWMS.dll
 C:\code\MvcWMS\MvcWMS\obj\Debug\MvcWMS.pdb
 C:\code\MvcWMS\MvcWMS\bin\Breeze.WebApi.dll
@@ -74,3 +73,4 @@ C:\code\MvcWMS\MvcWMS\bin\Autofac.Integration.WebApi.dll
 C:\code\MvcWMS\MvcWMS\bin\Autofac.xml
 C:\code\MvcWMS\MvcWMS\bin\Autofac.Integration.Mvc.xml
 C:\code\MvcWMS\MvcWMS\bin\Autofac.Integration.WebApi.xml
+C:\code\MvcWMS\MvcWMS\obj\Debug\MvcWMS.csprojResolveAssemblyReference.cache

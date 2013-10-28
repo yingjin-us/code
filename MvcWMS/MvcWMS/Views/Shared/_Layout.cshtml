@@ -6,11 +6,33 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/logger")
 </head>
 <body>
-    @RenderBody()
+     <nav class="container">  
+     <div id="header" >  
+       <div id="logo">  
+         <h1>Tax Application (sample for blogging purposes :))</h1> 
+       </div>
+     </div>  
+     <nav>  
+       <ul id="menu">
+         <li>@Html.ActionLink("Home", "Index", "TaxPayer")</li>
+         <li>@Html.ActionLink("Tax Payer", "Index", "TaxPayer")</li>
+       </ul>
+     </nav>
+     <div id="main">
+       @RenderBody()
+     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @RenderSection("scripts", required: false)
+
+   @Scripts.Render("~/bundles/jquery")
+   @Scripts.Render("~/bundles/knockout")
+   @Scripts.Render("~/bundles/koGrid")  
+   @Scripts.Render("~/bundles/q")
+   @Scripts.Render("~/bundles/breeze")
+   @Scripts.Render("~/bundles/app")
+   @RenderSection("scripts", required: false)
+    
 </body>
 </html>
