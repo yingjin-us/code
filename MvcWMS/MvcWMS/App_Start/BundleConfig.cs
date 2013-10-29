@@ -47,7 +47,14 @@ namespace MvcWMS
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                       "~/Content/site.css",
+                       "~/Content/KoGrid.css",
+                       "~/Content/ie.css",
+                       "~/Content/print.css",
+                       "~/Content/screen.css"
+                       ));
+
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",
@@ -70,7 +77,7 @@ namespace MvcWMS
             bundles.Add(new ScriptBundle("~/bundles/breeze").Include(
                         "~/Scripts/breeze.js",
                         "~/Scripts/breeze.debug.js",
-                        "~/Scriptsbreeze.intellisense.js"));
+                        "~/Scripts/breeze.intellisense.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/logger").Include(
             "~/Scripts/App/Logger.js"));
