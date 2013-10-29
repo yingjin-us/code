@@ -63,6 +63,10 @@ namespace MvcWMS
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
 
+            bundles.Add(new ScriptBundle("~/bundles/q").Include(
+            "~/Scripts/q.js",
+            "~/Scripts/q.min.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/breeze").Include(
                         "~/Scripts/breeze.js",
                         "~/Scripts/breeze.debug.js",
