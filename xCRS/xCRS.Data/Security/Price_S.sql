@@ -1,0 +1,3 @@
+﻿CREATE USER [Price_S] FOR LOGIN [Price_S]
+    WITH DEFAULT_SCHEMA = [Price_S];
+

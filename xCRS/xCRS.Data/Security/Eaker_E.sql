@@ -1,0 +1,3 @@
+﻿CREATE USER [Eaker_E] FOR LOGIN [Eaker_E]
+    WITH DEFAULT_SCHEMA = [Eaker_E];
+

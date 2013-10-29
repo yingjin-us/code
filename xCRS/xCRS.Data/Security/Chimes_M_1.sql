@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Chimes_M]
+    AUTHORIZATION [Chimes_M];
+

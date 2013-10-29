@@ -1,0 +1,3 @@
+﻿CREATE USER [Solis_A] FOR LOGIN [Solis_A]
+    WITH DEFAULT_SCHEMA = [Solis_A];
+

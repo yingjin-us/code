@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Burke_J]
+    AUTHORIZATION [Burke_J];
+

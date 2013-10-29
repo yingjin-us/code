@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Driver_B]
+    AUTHORIZATION [Driver_B];
+

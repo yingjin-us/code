@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Ficke_R]
+    AUTHORIZATION [Ficke_R];
+

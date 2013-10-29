@@ -1,0 +1,3 @@
+﻿CREATE USER [Myers_M] FOR LOGIN [Myers_M]
+    WITH DEFAULT_SCHEMA = [Myers_M];
+

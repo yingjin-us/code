@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Acker_S]
+    AUTHORIZATION [Acker_S];
+

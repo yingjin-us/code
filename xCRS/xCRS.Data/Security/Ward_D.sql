@@ -1,0 +1,3 @@
+﻿CREATE USER [Ward_D] FOR LOGIN [Ward_D]
+    WITH DEFAULT_SCHEMA = [Ward_D];
+

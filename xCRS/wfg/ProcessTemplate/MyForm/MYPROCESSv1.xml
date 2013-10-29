@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package schemaLocation="http://www.wfmc.org/2002/XPDL1.0 http://wfmc.org/standards/docs/TC-1025_schema_10_xpdl.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Id="WORKFLOWGEN" xmlns="http://www.wfmc.org/2002/XPDL1.0">
+  <PackageHeader>
+    <XPDLVersion>1.0</XPDLVersion>
+    <Vendor>WORKFLOWGEN 5.1 9</Vendor>
+    <Created>3/26/2010 12:00 PM</Created>
+  </PackageHeader>
+  <ConformanceClass GraphConformance="NON_BLOCKED">
+  </ConformanceClass>
+  <Script Type="text/vbscript">
+  </Script>
+  <TypeDeclarations>
+    <TypeDeclaration Id="File" Name="File">
+      <ExternalReference location="http://www.workflowgen.com/xsd/xpdl/schema-v1-0.xsd">
+      </ExternalReference>
+    </TypeDeclaration>
+  </TypeDeclarations>
+  <Participants>
+    <Participant Id="ADVANTYS">
+      <ParticipantType Type="ROLE">
+      </ParticipantType>
+      <Description>ADVANTYS</Description>
+    </Participant>
+  </Participants>
+  <WorkflowProcesses>
+    <WorkflowProcess AccessLevel="PUBLIC" Id="MYPROCESS">
+      <ProcessHeader>
+        <Created>3/26/2010 12:00 PM</Created>
+        <Description>My first process</Description>
+      </ProcessHeader>
+      <RedefinableHeader PublicationStatus="UNDER_TEST">
+        <Author>guillaume</Author>
+        <Version>1</Version>
+        <Codepage>1252</Codepage>
+        <Responsibles>
+          <Responsible>ADVANTYS</Responsible>
+        </Responsibles>
+      </RedefinableHeader>
+      <DataFields>
+        <DataField Id="FORM_URL" IsArray="FALSE">
+          <DataType>
+            <BasicType Type="STRING">
+            </BasicType>
+          </DataType>
+          <InitialValue><![CDATA[/wfgen/WfApps/WebForms/MyForm/Default.aspx]]></InitialValue>
+          <Description>Form</Description>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Visible" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispSearch" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispList" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispHome" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="ReadOnly" Value="N">
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </DataField>
+        <DataField Id="FORM_DATA" IsArray="FALSE">
+          <DataType>
+            <DeclaredType Id="File">
+            </DeclaredType>
+          </DataType>
+          <Description>Data</Description>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Visible" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispSearch" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispList" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispHome" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="ReadOnly" Value="N">
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </DataField>
+        <DataField Id="FORM_ARCHIVE" IsArray="FALSE">
+          <DataType>
+            <DeclaredType Id="File">
+            </DeclaredType>
+          </DataType>
+          <Description>Copy of the form</Description>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Visible" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispSearch" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispList" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispHome" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispSize" Value="100">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="ReadOnly" Value="N">
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </DataField>
+        <DataField Id="ATTACHMENT" IsArray="FALSE">
+          <DataType>
+            <DeclaredType Id="File">
+            </DeclaredType>
+          </DataType>
+          <Description>Attachment</Description>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Visible" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispSearch" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispList" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispHome" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="ReadOnly" Value="N">
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </DataField>
+        <DataField Id="DRAFT" IsArray="FALSE">
+          <DataType>
+            <BasicType Type="STRING">
+            </BasicType>
+          </DataType>
+          <Description>Draft</Description>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Visible" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispSearch" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispList" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispHome" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="ReadOnly" Value="N">
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </DataField>
+        <DataField Id="APPROVED" IsArray="FALSE">
+          <DataType>
+            <BasicType Type="STRING">
+            </BasicType>
+          </DataType>
+          <Description>Request approved</Description>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Visible" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispSearch" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispList" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispHome" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispSize" Value="80">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="ReadOnly" Value="N">
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </DataField>
+      </DataFields>
+      <Participants>
+        <Participant Id="REQUESTER">
+          <ParticipantType Type="ROLE">
+          </ParticipantType>
+          <Description>Requester</Description>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Role" Value="REQUESTER">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="Type" Value="ROLE">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="ViewGraphics" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="ReassignAction" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="CancelRequest" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="ViewStatistics" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="Scope" Value="PROCESS">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="MapToUsers" Value="guillaume,wfgen_admin">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="MapToGroups" Value="">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="MapToDirectories" Value="">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="MapToCoordinators" Value="">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="SwimLaneWidth" Value="243" />
+            <ExtendedAttribute Name="SwimLaneHeight" Value="97" />
+            <ExtendedAttribute Name="DataSourceQuery" Value="">
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </Participant>
+        <Participant Id="ACTOR">
+          <ParticipantType Type="ROLE">
+          </ParticipantType>
+          <Description>Actor</Description>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Role" Value="ACTOR">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="Type" Value="ROLE">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="ViewGraphics" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="ReassignAction" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="CancelRequest" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="ViewStatistics" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="Scope" Value="PROCESS">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="MapToUsers" Value="wfgen_admin,guillaume">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="MapToGroups" Value="">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="MapToDirectories" Value="">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="MapToCoordinators" Value="">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="SwimLaneWidth" Value="260" />
+            <ExtendedAttribute Name="SwimLaneHeight" Value="97" />
+            <ExtendedAttribute Name="DataSourceQuery" Value="">
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </Participant>
+      </Participants>
+      <Applications>
+        <Application Id="EFORMASPX_ACTION1">
+          <Description>WebForms management</Description>
+          <FormalParameters>
+            <FormalParameter Id="ACTION1_ATTACHMENT" Index="1" Mode="INOUT">
+              <DataType>
+                <DeclaredType Id="File">
+                </DeclaredType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="ACTION1_FIRSTNAME" Index="2" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="ACTION1_LABEL" Index="3" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="ACTION1_LASTNAME" Index="4" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="CURRENT_ACTION" Index="5" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="CURRENT_REQUESTID" Index="6" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="DRAFT" Index="7" Mode="OUT">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="FORM_ARCHIVE" Index="8" Mode="OUT">
+              <DataType>
+                <DeclaredType Id="File">
+                </DeclaredType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="FORM_DATA" Index="9" Mode="INOUT">
+              <DataType>
+                <DeclaredType Id="File">
+                </DeclaredType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="FORM_FIELDS_HIDDEN" Index="10" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="FORM_FIELDS_READONLY" Index="11" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="FORM_FIELDS_REQUIRED" Index="12" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="FORM_URL" Index="13" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+          </FormalParameters>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Type" Value="WEBAPP">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="Class" Value="EFORMASPX">
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </Application>
+        <Application Id="EFORMASPX_ACTION2">
+          <Description>WebForms management</Description>
+          <FormalParameters>
+            <FormalParameter Id="ACTION1_ATTACHMENT" Index="1" Mode="IN">
+              <DataType>
+                <DeclaredType Id="File">
+                </DeclaredType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="ACTION2_APPROVE" Index="2" Mode="OUT">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="ACTION2_DATE" Index="3" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="ACTION2_EMAIL" Index="4" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="ACTION2_FIRSTNAME" Index="5" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="ACTION2_LASTNAME" Index="6" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="CURRENT_ACTION" Index="7" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="FORM_ARCHIVE" Index="8" Mode="OUT">
+              <DataType>
+                <DeclaredType Id="File">
+                </DeclaredType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="FORM_DATA" Index="9" Mode="INOUT">
+              <DataType>
+                <DeclaredType Id="File">
+                </DeclaredType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="FORM_FIELDS_HIDDEN" Index="10" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="FORM_FIELDS_READONLY" Index="11" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="FORM_FIELDS_REQUIRED" Index="12" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="FORM_URL" Index="13" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+          </FormalParameters>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Type" Value="WEBAPP">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="Class" Value="EFORMASPX">
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </Application>
+        <Application Id="EFORMASPX_ACTION3">
+          <Description>WebForms management</Description>
+          <FormalParameters>
+            <FormalParameter Id="ACTION1_ATTACHMENT" Index="1" Mode="IN">
+              <DataType>
+                <DeclaredType Id="File">
+                </DeclaredType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="CURRENT_ACTION" Index="2" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="FORM_ARCHIVE" Index="3" Mode="OUT">
+              <DataType>
+                <DeclaredType Id="File">
+                </DeclaredType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="FORM_DATA" Index="4" Mode="INOUT">
+              <DataType>
+                <DeclaredType Id="File">
+                </DeclaredType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="FORM_FIELDS_HIDDEN" Index="5" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="FORM_FIELDS_READONLY" Index="6" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="FORM_FIELDS_REQUIRED" Index="7" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="FORM_URL" Index="8" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+          </FormalParameters>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Type" Value="WEBAPP">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="Class" Value="EFORMASPX">
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </Application>
+      </Applications>
+      <Activities>
+        <Activity Id="ACTION1">
+          <Description>Action 1</Description>
+          <Implementation>
+            <Tool Id="EFORMASPX_ACTION1" Type="APPLICATION">
+              <ActualParameters>
+                <ActualParameter>ATTACHMENT</ActualParameter>
+                <ActualParameter><![CDATA[<WF_USER_FIRSTNAME>]]></ActualParameter>
+                <ActualParameter><![CDATA[Label]]></ActualParameter>
+                <ActualParameter><![CDATA[<WF_USER_LASTNAME>]]></ActualParameter>
+                <ActualParameter><![CDATA[<WF_ACTIVITY_NAME>]]></ActualParameter>
+                <ActualParameter><![CDATA[<WF_PROCESS_INST_ID>]]></ActualParameter>
+                <ActualParameter>DRAFT</ActualParameter>
+                <ActualParameter>FORM_ARCHIVE</ActualParameter>
+                <ActualParameter>FORM_DATA</ActualParameter>
+                <ActualParameter><![CDATA[ACTION2_*]]></ActualParameter>
+                <ActualParameter>
+                </ActualParameter>
+                <ActualParameter>
+                </ActualParameter>
+                <ActualParameter>FORM_URL</ActualParameter>
+              </ActualParameters>
+            </Tool>
+          </Implementation>
+          <Performer>REQUESTER</Performer>
+          <TransitionRestrictions>
+            <TransitionRestriction>
+              <Split Type="XOR">
+                <TransitionRefs>
+                  <TransitionRef Id="1">
+                  </TransitionRef>
+                  <TransitionRef Id="5">
+                  </TransitionRef>
+                </TransitionRefs>
+              </Split>
+            </TransitionRestriction>
+          </TransitionRestrictions>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="AssignType" Value="PUSH_AUTO_REQUESTER">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="NotifyAssignTodo" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="NotifyTodo" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="NotifyDelay" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="NotifyCancelAssign" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="Visible" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DurationWorkhour" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="OverdueDuration" Value="-1">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="Help">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="HelpLink" Value="">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="HelpMail" Value="">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="xPos" Value="61">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="yPos" Value="129.1">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="IconSize" Value="large">
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </Activity>
+        <Activity Id="ACTION2">
+          <Description>Action 2</Description>
+          <Implementation>
+            <Tool Id="EFORMASPX_ACTION2" Type="APPLICATION">
+              <ActualParameters>
+                <ActualParameter>ATTACHMENT</ActualParameter>
+                <ActualParameter>APPROVED</ActualParameter>
+                <ActualParameter><![CDATA[<WF_SYSTEM_DATETIME>]]></ActualParameter>
+                <ActualParameter><![CDATA[<WF_USER_EMAIL>]]></ActualParameter>
+                <ActualParameter><![CDATA[<WF_USER_FIRSTNAME>]]></ActualParameter>
+                <ActualParameter><![CDATA[<WF_USER_LASTNAME>]]></ActualParameter>
+                <ActualParameter><![CDATA[<WF_ACTIVITY_NAME>]]></ActualParameter>
+                <ActualParameter>FORM_ARCHIVE</ActualParameter>
+                <ActualParameter>FORM_DATA</ActualParameter>
+                <ActualParameter><![CDATA[saveButton]]></ActualParameter>
+                <ActualParameter><![CDATA[ACTION1_*]]></ActualParameter>
+                <ActualParameter><![CDATA[ACTION2_APPROVE]]></ActualParameter>
+                <ActualParameter>FORM_URL</ActualParameter>
+              </ActualParameters>
+            </Tool>
+          </Implementation>
+          <Performer>ACTOR</Performer>
+          <TransitionRestrictions>
+            <TransitionRestriction>
+              <Join Type="XOR">
+              </Join>
+              <Split Type="XOR">
+                <TransitionRefs>
+                  <TransitionRef Id="2">
+                  </TransitionRef>
+                  <TransitionRef Id="4">
+                  </TransitionRef>
+                </TransitionRefs>
+              </Split>
+            </TransitionRestriction>
+          </TransitionRestrictions>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="AssignType" Value="PULL">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="NotifyAssignTodo" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="NotifyTodo" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="NotifyDelay" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="NotifyCancelAssign" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="Visible" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DurationWorkhour" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="OverdueDuration" Value="-1">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="Help">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="HelpLink" Value="">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="HelpMail" Value="">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="xPos" Value="288.1">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="yPos" Value="219.1">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="IconSize" Value="large">
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </Activity>
+        <Activity Id="ACTION3">
+          <Description>Action 3</Description>
+          <Implementation>
+            <Tool Id="EFORMASPX_ACTION3" Type="APPLICATION">
+              <ActualParameters>
+                <ActualParameter>ATTACHMENT</ActualParameter>
+                <ActualParameter><![CDATA[<WF_ACTIVITY_NAME>]]></ActualParameter>
+                <ActualParameter>FORM_ARCHIVE</ActualParameter>
+                <ActualParameter>FORM_DATA</ActualParameter>
+                <ActualParameter><![CDATA[saveButton]]></ActualParameter>
+                <ActualParameter><![CDATA[ACTION2_*]]></ActualParameter>
+                <ActualParameter>
+                </ActualParameter>
+                <ActualParameter>FORM_URL</ActualParameter>
+              </ActualParameters>
+            </Tool>
+          </Implementation>
+          <Performer>REQUESTER</Performer>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="AssignType" Value="PUSH_AUTO_REQUESTER">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="NotifyAssignTodo" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="NotifyTodo" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="NotifyDelay" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="NotifyCancelAssign" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="Visible" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DurationWorkhour" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="OverdueDuration" Value="-1">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="Help">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="HelpLink" Value="">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="HelpMail" Value="">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="xPos" Value="56.1">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="yPos" Value="279.1">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="IconSize" Value="large">
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </Activity>
+        <Activity Id="_END">
+          <Route>
+          </Route>
+          <TransitionRestrictions>
+            <TransitionRestriction>
+              <Join Type="XOR">
+              </Join>
+            </TransitionRestriction>
+          </TransitionRestrictions>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="xPos" Value="469" />
+            <ExtendedAttribute Name="yPos" Value="229" />
+          </ExtendedAttributes>
+        </Activity>
+      </Activities>
+      <Transitions>
+        <Transition Id="1" From="ACTION1" To="ACTION2">
+          <Condition Type="OTHERWISE">
+          </Condition>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="anchorFrom" Value="2" />
+            <ExtendedAttribute Name="anchorTo" Value="1" />
+            <ExtendedAttribute Name="BreakPoint0" Value="350,151" />
+            <ExtendedAttribute Value="N" Name="ManualBreakPoints" />
+          </ExtendedAttributes>
+        </Transition>
+        <Transition Id="5" From="ACTION1" To="ACTION1">
+          <Condition Type="CONDITION"><![CDATA[<DRAFT>="Yes"]]></Condition>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="anchorFrom" Value="4" />
+            <ExtendedAttribute Name="anchorTo" Value="4" />
+          </ExtendedAttributes>
+        </Transition>
+        <Transition Id="4" From="ACTION2" To="_END">
+          <Condition Type="OTHERWISE">
+          </Condition>
+          <ExtendedAttributes>
+            <ExtendedAttribute Value="229" Name="YPosEnd" />
+            <ExtendedAttribute Value="469" Name="XPosEnd" />
+            <ExtendedAttribute Name="anchorFrom" Value="2" />
+            <ExtendedAttribute Name="anchorTo" Value="4" />
+          </ExtendedAttributes>
+        </Transition>
+        <Transition Id="2" From="ACTION2" To="ACTION3">
+          <Condition Type="CONDITION"><![CDATA[<APPROVED>="To be completed"]]></Condition>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="anchorFrom" Value="4" />
+            <ExtendedAttribute Name="anchorTo" Value="1" />
+            <ExtendedAttribute Value="19.1" Name="XPosEnd" />
+            <ExtendedAttribute Value="294.1" Name="YPosEnd" />
+            <ExtendedAttribute Value="4" Name="anchorFrom" />
+            <ExtendedAttribute Value="1" Name="anchorTo" />
+            <ExtendedAttribute Name="BreakPoint0" Value="118,241" />
+            <ExtendedAttribute Value="N" Name="ManualBreakPoints" />
+          </ExtendedAttributes>
+        </Transition>
+        <Transition Id="3" From="ACTION3" To="ACTION2">
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="anchorFrom" Value="3" />
+            <ExtendedAttribute Name="anchorTo" Value="3" />
+            <ExtendedAttribute Name="BreakPoint0" Value="118,342" />
+            <ExtendedAttribute Name="BreakPoint1" Value="350,342" />
+            <ExtendedAttribute Value="N" Name="ManualBreakPoints" />
+          </ExtendedAttributes>
+        </Transition>
+      </Transitions>
+      <ExtendedAttributes>
+        <ExtendedAttribute Name="Categories" Value="">
+        </ExtendedAttribute>
+        <ExtendedAttribute Name="NotifyComplete" Value="Y">
+        </ExtendedAttribute>
+        <ExtendedAttribute Name="ArchiveActivityResult" Value="Y">
+        </ExtendedAttribute>
+        <ExtendedAttribute Name="ProcessDataDatabaseFileStorage" Value="N">
+        </ExtendedAttribute>
+        <ExtendedAttribute Name="DurationWorkhour" Value="N">
+        </ExtendedAttribute>
+        <ExtendedAttribute Name="Subflow" Value="N">
+        </ExtendedAttribute>
+        <ExtendedAttribute Value="117" Name="GRAPH_BEGIN_POINT_X" />
+        <ExtendedAttribute Value="67" Name="GRAPH_BEGIN_POINT_Y" />
+        <ExtendedAttribute Value="0" Name="GRAPH_SCROLL_POS_X" />
+        <ExtendedAttribute Value="0" Name="GRAPH_SCROLL_POS_Y" />
+        <ExtendedAttribute Name="GRAPHIC_MODE" Value="NONE" />
+        <ExtendedAttribute Name="SwimLaneMode" Value="Y" View="Vertical" />
+      </ExtendedAttributes>
+    </WorkflowProcess>
+  </WorkflowProcesses>
+</Package>

@@ -1,0 +1,3 @@
+﻿CREATE USER [Smith_J] FOR LOGIN [Smith_J]
+    WITH DEFAULT_SCHEMA = [Smith_J];
+

@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Handy_R]
+    AUTHORIZATION [Handy_R];
+

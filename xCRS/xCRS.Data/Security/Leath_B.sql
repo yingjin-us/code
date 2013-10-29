@@ -1,0 +1,3 @@
+﻿CREATE USER [Leath_B] FOR LOGIN [Leath_B]
+    WITH DEFAULT_SCHEMA = [Leath_B];
+

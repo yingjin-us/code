@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Brewer_B]
+    AUTHORIZATION [Brewer_B];
+

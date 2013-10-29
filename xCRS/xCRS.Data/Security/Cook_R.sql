@@ -1,0 +1,3 @@
+﻿CREATE USER [Cook_R] FOR LOGIN [Cook_R]
+    WITH DEFAULT_SCHEMA = [Cook_R];
+

@@ -1,0 +1,3 @@
+﻿CREATE USER [Zill_N] FOR LOGIN [Zill_N]
+    WITH DEFAULT_SCHEMA = [Zill_N];
+

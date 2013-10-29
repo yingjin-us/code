@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Cook_T]
+    AUTHORIZATION [Cook_T];
+

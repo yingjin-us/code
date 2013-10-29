@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="xCRSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="xCRSModelStoreContainer">
+    <EntitySet Name="HRTransactionHistory" EntityType="xCRSModel.Store.HRTransactionHistory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRTransactions" EntityType="xCRSModel.Store.HRTransactions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRTransactionStatus" EntityType="xCRSModel.Store.HRTransactionStatus" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRTransactionTypes" EntityType="xCRSModel.Store.HRTransactionTypes" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_HRTransactionHistory_HRTransactions" Association="xCRSModel.Store.FK_HRTransactionHistory_HRTransactions">
+      <End Role="HRTransactions" EntitySet="HRTransactions" />
+      <End Role="HRTransactionHistory" EntitySet="HRTransactionHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRTransactionHistory_HRTransactionStatus" Association="xCRSModel.Store.FK_HRTransactionHistory_HRTransactionStatus">
+      <End Role="HRTransactionStatus" EntitySet="HRTransactionStatus" />
+      <End Role="HRTransactionHistory" EntitySet="HRTransactionHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRTransactions_HRTransactionStatus" Association="xCRSModel.Store.FK_HRTransactions_HRTransactionStatus">
+      <End Role="HRTransactionStatus" EntitySet="HRTransactionStatus" />
+      <End Role="HRTransactions" EntitySet="HRTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRTransactions_HRTransactionTypes" Association="xCRSModel.Store.FK_HRTransactions_HRTransactionTypes">
+      <End Role="HRTransactionTypes" EntitySet="HRTransactionTypes" />
+      <End Role="HRTransactions" EntitySet="HRTransactions" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="HRTransactionHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HRTransactionid" Type="int" />
+    <Property Name="reviewedBy" Type="nvarchar" MaxLength="12" />
+    <Property Name="reviewedOn" Type="datetime" />
+    <Property Name="statusId" Type="int" />
+    <Property Name="reviewerNote" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="HRTransactions">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="statusId" Type="int" />
+    <Property Name="HRTransactionTypeId" Type="int" Nullable="false" />
+    <Property Name="createdBy" Type="nvarchar" MaxLength="12" />
+    <Property Name="createdOn" Type="datetime" />
+    <Property Name="createdFor" Type="nvarchar" MaxLength="12" />
+    <Property Name="effectiveDate" Type="datetime" />
+    <Property Name="note" Type="nvarchar(max)" />
+    <Property Name="LaborClass" Type="nvarchar" MaxLength="50" />
+    <Property Name="LaborGroup" Type="nvarchar" MaxLength="50" />
+    <Property Name="GLC" Type="nvarchar" MaxLength="50" />
+    <Property Name="NewTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="DirectoryTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsExempt" Type="bit" />
+    <Property Name="CurrentLocation" Type="nvarchar" MaxLength="50" />
+    <Property Name="NewLocation" Type="nvarchar" MaxLength="50" />
+    <Property Name="CurrentBoss" Type="nvarchar" MaxLength="12" />
+    <Property Name="NewBoss" Type="nvarchar" MaxLength="12" />
+    <Property Name="IsNewbossInSameOrg" Type="bit" />
+    <Property Name="ChangeTimesheetApprover" Type="bit" />
+    <Property Name="TimesheetApprover" Type="nvarchar" MaxLength="12" />
+    <Property Name="IsFulltimer" Type="bit" />
+    <Property Name="PartTimeRatio" Type="float" />
+    <Property Name="IsFlexHours" Type="bit" />
+    <Property Name="IsReturnToFullTime" Type="bit" />
+    <Property Name="IsTelework" Type="bit" />
+    <Property Name="IsAWASubmitted" Type="bit" />
+    <Property Name="CurrentOrg" Type="varchar" MaxLength="20" />
+    <Property Name="NewOrg" Type="varchar" MaxLength="20" />
+    <Property Name="discriminator" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HRTransactionStatus">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="description" Type="nvarchar" MaxLength="200" />
+    <Property Name="createdBy" Type="nvarchar" MaxLength="12" />
+    <Property Name="createdOn" Type="datetime" />
+    <Property Name="updatedBy" Type="nvarchar" MaxLength="12" />
+    <Property Name="updatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="HRTransactionTypes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="description" Type="nvarchar(max)" />
+    <Property Name="createdBy" Type="nvarchar" MaxLength="12" />
+    <Property Name="createdOn" Type="datetime" />
+    <Property Name="updatedBy" Type="nvarchar" MaxLength="12" />
+    <Property Name="updatedOn" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_HRTransactionHistory_HRTransactions">
+    <End Role="HRTransactions" Type="xCRSModel.Store.HRTransactions" Multiplicity="0..1" />
+    <End Role="HRTransactionHistory" Type="xCRSModel.Store.HRTransactionHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRTransactions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="HRTransactionHistory">
+        <PropertyRef Name="HRTransactionid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRTransactionHistory_HRTransactionStatus">
+    <End Role="HRTransactionStatus" Type="xCRSModel.Store.HRTransactionStatus" Multiplicity="0..1" />
+    <End Role="HRTransactionHistory" Type="xCRSModel.Store.HRTransactionHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRTransactionStatus">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="HRTransactionHistory">
+        <PropertyRef Name="statusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRTransactions_HRTransactionStatus">
+    <End Role="HRTransactionStatus" Type="xCRSModel.Store.HRTransactionStatus" Multiplicity="0..1" />
+    <End Role="HRTransactions" Type="xCRSModel.Store.HRTransactions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRTransactionStatus">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="HRTransactions">
+        <PropertyRef Name="statusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRTransactions_HRTransactionTypes">
+    <End Role="HRTransactionTypes" Type="xCRSModel.Store.HRTransactionTypes" Multiplicity="1" />
+    <End Role="HRTransactions" Type="xCRSModel.Store.HRTransactions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRTransactionTypes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="HRTransactions">
+        <PropertyRef Name="HRTransactionTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

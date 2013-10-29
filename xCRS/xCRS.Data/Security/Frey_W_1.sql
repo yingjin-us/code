@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Frey_W]
+    AUTHORIZATION [Frey_W];
+

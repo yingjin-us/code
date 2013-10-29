@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Powers_J]
+    AUTHORIZATION [Powers_J];
+

@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Price_S]
+    AUTHORIZATION [Price_S];
+

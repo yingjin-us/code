@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [OReagan_K]
+    AUTHORIZATION [OReagan_K];
+

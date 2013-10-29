@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Chu_A]
+    AUTHORIZATION [Chu_A];
+

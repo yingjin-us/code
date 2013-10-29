@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Hymes_M]
+    AUTHORIZATION [Hymes_M];
+

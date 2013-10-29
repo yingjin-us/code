@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Leath_B]
+    AUTHORIZATION [Leath_B];
+

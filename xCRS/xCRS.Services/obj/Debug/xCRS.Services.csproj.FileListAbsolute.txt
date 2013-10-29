@@ -1,0 +1,11 @@
+C:\xCRS\xCRS.Services\bin\Debug\xCRS.Services.dll
+C:\xCRS\xCRS.Services\bin\Debug\xCRS.Services.pdb
+C:\xCRS\xCRS.Services\bin\Debug\xCRS.CoreModel.dll
+C:\xCRS\xCRS.Services\bin\Debug\xCRS.IServices.dll
+C:\xCRS\xCRS.Services\bin\Debug\xCRS.CoreModel.pdb
+C:\xCRS\xCRS.Services\bin\Debug\xCRS.IServices.pdb
+C:\xCRS\xCRS.Services\obj\Debug\xCRS.Services.csprojResolveAssemblyReference.cache
+C:\xCRS\xCRS.Services\obj\Debug\xCRS.Services.dll
+C:\xCRS\xCRS.Services\obj\Debug\xCRS.Services.pdb
+C:\xCRS\xCRS.Services\bin\Debug\EntityFramework.dll
+C:\xCRS\xCRS.Services\bin\Debug\EntityFramework.xml

@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Vivari_B]
+    AUTHORIZATION [Vivari_B];
+

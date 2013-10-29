@@ -1,0 +1,3 @@
+﻿CREATE USER [Hymes_M] FOR LOGIN [Hymes_M]
+    WITH DEFAULT_SCHEMA = [Hymes_M];
+

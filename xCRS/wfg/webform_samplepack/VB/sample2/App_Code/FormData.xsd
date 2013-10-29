@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FormData" targetNamespace="http://tempuri.org/FormData" xmlns:mstns="http://tempuri.org/FormData" xmlns="http://tempuri.org/FormData" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="ExcludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="FormData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="FormData" msprop:Generator_DataSetName="FormData">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Table1" msprop:Generator_UserTableName="Table1" msprop:Generator_RowDeletedName="Table1RowDeleted" msprop:Generator_RowChangedName="Table1RowChanged" msprop:Generator_RowClassName="Table1Row" msprop:Generator_RowChangingName="Table1RowChanging" msprop:Generator_RowEvArgName="Table1RowChangeEvent" msprop:Generator_RowEvHandlerName="Table1RowChangeEventHandler" msprop:Generator_TableClassName="Table1DataTable" msprop:Generator_TableVarName="tableTable1" msprop:Generator_RowDeletingName="Table1RowDeleting" msprop:Generator_TablePropName="Table1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TEXT_BOX" msprop:Generator_UserColumnName="TEXT_BOX" msprop:Generator_ColumnVarNameInTable="columnTEXT_BOX" msprop:Generator_ColumnPropNameInRow="TEXT_BOX" msprop:Generator_ColumnPropNameInTable="TEXT_BOXColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DROP_DOWN_LIST" msprop:Generator_UserColumnName="DROP_DOWN_LIST" msprop:Generator_ColumnVarNameInTable="columnDROP_DOWN_LIST" msprop:Generator_ColumnPropNameInRow="DROP_DOWN_LIST" msprop:Generator_ColumnPropNameInTable="DROP_DOWN_LISTColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LIST_BOX" msprop:Generator_UserColumnName="LIST_BOX" msprop:Generator_ColumnVarNameInTable="columnLIST_BOX" msprop:Generator_ColumnPropNameInRow="LIST_BOX" msprop:Generator_ColumnPropNameInTable="LIST_BOXColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CHECK_BOX" msprop:Generator_UserColumnName="CHECK_BOX" msprop:Generator_ColumnVarNameInTable="columnCHECK_BOX" msprop:Generator_ColumnPropNameInRow="CHECK_BOX" msprop:Generator_ColumnPropNameInTable="CHECK_BOXColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CHECK_BOX_LIST" msprop:Generator_UserColumnName="CHECK_BOX_LIST" msprop:Generator_ColumnVarNameInTable="columnCHECK_BOX_LIST" msprop:Generator_ColumnPropNameInRow="CHECK_BOX_LIST" msprop:Generator_ColumnPropNameInTable="CHECK_BOX_LISTColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RADIO_BUTTON" msprop:Generator_UserColumnName="RADIO_BUTTON" msprop:Generator_ColumnVarNameInTable="columnRADIO_BUTTON" msprop:Generator_ColumnPropNameInRow="RADIO_BUTTON" msprop:Generator_ColumnPropNameInTable="RADIO_BUTTONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RADIO_BUTTON_LIST" msprop:Generator_UserColumnName="RADIO_BUTTON_LIST" msprop:Generator_ColumnVarNameInTable="columnRADIO_BUTTON_LIST" msprop:Generator_ColumnPropNameInRow="RADIO_BUTTON_LIST" msprop:Generator_ColumnPropNameInTable="RADIO_BUTTON_LISTColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FILE_UPLOAD" msprop:Generator_UserColumnName="FILE_UPLOAD" msprop:Generator_ColumnVarNameInTable="columnFILE_UPLOAD" msprop:Generator_ColumnPropNameInRow="FILE_UPLOAD" msprop:Generator_ColumnPropNameInTable="FILE_UPLOADColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="HTML_INPUT_FILE" msprop:Generator_UserColumnName="HTML_INPUT_FILE" msprop:Generator_ColumnVarNameInTable="columnHTML_INPUT_FILE" msprop:Generator_ColumnPropNameInRow="HTML_INPUT_FILE" msprop:Generator_ColumnPropNameInTable="HTML_INPUT_FILEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CURRENT_ACTION" msprop:Generator_UserColumnName="CURRENT_ACTION" msprop:Generator_ColumnVarNameInTable="columnCURRENT_ACTION" msprop:Generator_ColumnPropNameInRow="CURRENT_ACTION" msprop:Generator_ColumnPropNameInTable="CURRENT_ACTIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FORM_FIELDS_READONLY" msprop:Generator_UserColumnName="FORM_FIELDS_READONLY" msprop:Generator_ColumnVarNameInTable="columnFORM_FIELDS_READONLY" msprop:Generator_ColumnPropNameInRow="FORM_FIELDS_READONLY" msprop:Generator_ColumnPropNameInTable="FORM_FIELDS_READONLYColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FORM_FIELDS_REQUIRED" msprop:Generator_UserColumnName="FORM_FIELDS_REQUIRED" msprop:Generator_ColumnVarNameInTable="columnFORM_FIELDS_REQUIRED" msprop:Generator_ColumnPropNameInRow="FORM_FIELDS_REQUIRED" msprop:Generator_ColumnPropNameInTable="FORM_FIELDS_REQUIREDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TEXT_BOX_DATE" msprop:Generator_UserColumnName="TEXT_BOX_DATE" msprop:Generator_ColumnVarNameInTable="columnTEXT_BOX_DATE" msprop:Generator_ColumnPropNameInRow="TEXT_BOX_DATE" msprop:Generator_ColumnPropNameInTable="TEXT_BOX_DATEColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TEXT_BOX_DOUBLE" msprop:Generator_UserColumnName="TEXT_BOX_DOUBLE" msprop:Generator_ColumnVarNameInTable="columnTEXT_BOX_DOUBLE" msprop:Generator_ColumnPropNameInRow="TEXT_BOX_DOUBLE" msprop:Generator_ColumnPropNameInTable="TEXT_BOX_DOUBLEColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="TEXT_BOX_DATE_TIME" msprop:Generator_UserColumnName="TEXT_BOX_DATE_TIME" msprop:Generator_ColumnVarNameInTable="columnTEXT_BOX_DATE_TIME" msprop:Generator_ColumnPropNameInRow="TEXT_BOX_DATE_TIME" msprop:Generator_ColumnPropNameInTable="TEXT_BOX_DATE_TIMEColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PEOPLE_LIST" msprop:Generator_UserTableName="PEOPLE_LIST" msprop:Generator_RowDeletedName="PEOPLE_LISTRowDeleted" msprop:Generator_RowChangedName="PEOPLE_LISTRowChanged" msprop:Generator_RowClassName="PEOPLE_LISTRow" msprop:Generator_RowChangingName="PEOPLE_LISTRowChanging" msprop:Generator_RowEvArgName="PEOPLE_LISTRowChangeEvent" msprop:Generator_RowEvHandlerName="PEOPLE_LISTRowChangeEventHandler" msprop:Generator_TableClassName="PEOPLE_LISTDataTable" msprop:Generator_TableVarName="tablePEOPLE_LIST" msprop:Generator_RowDeletingName="PEOPLE_LISTRowDeleting" msprop:Generator_TablePropName="PEOPLE_LIST">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FIRSTNAME" msprop:Generator_UserColumnName="FIRSTNAME" msprop:Generator_ColumnVarNameInTable="columnFIRSTNAME" msprop:Generator_ColumnPropNameInRow="FIRSTNAME" msprop:Generator_ColumnPropNameInTable="FIRSTNAMEColumn" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="LASTNAME" msprop:Generator_UserColumnName="LASTNAME" msprop:Generator_ColumnVarNameInTable="columnLASTNAME" msprop:Generator_ColumnPropNameInRow="LASTNAME" msprop:Generator_ColumnPropNameInTable="LASTNAMEColumn" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="ID" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="PEOPLE_LISTKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PEOPLE_LIST" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

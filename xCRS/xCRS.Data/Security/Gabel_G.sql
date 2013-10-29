@@ -1,0 +1,3 @@
+﻿CREATE USER [Gabel_G] FOR LOGIN [Gabel_G]
+    WITH DEFAULT_SCHEMA = [Gabel_G];
+

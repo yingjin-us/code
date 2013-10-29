@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Troppe_P]
+    AUTHORIZATION [Troppe_P];
+

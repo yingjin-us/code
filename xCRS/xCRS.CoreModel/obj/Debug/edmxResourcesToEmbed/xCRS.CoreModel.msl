@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="xCRSModelStoreContainer" CdmEntityContainer="xCRSContext">
+    <EntitySetMapping Name="HRTransactionHistories">
+      <EntityTypeMapping TypeName="xCRSModel.HRTransactionHistory">
+        <MappingFragment StoreEntitySet="HRTransactionHistory">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="HRTransactionid" ColumnName="HRTransactionid" />
+          <ScalarProperty Name="reviewedBy" ColumnName="reviewedBy" />
+          <ScalarProperty Name="reviewedOn" ColumnName="reviewedOn" />
+          <ScalarProperty Name="statusId" ColumnName="statusId" />
+          <ScalarProperty Name="reviewerNote" ColumnName="reviewerNote" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRTransactions">
+      <EntityTypeMapping TypeName="IsTypeOf(xCRSModel.HRTransaction)">
+        <MappingFragment StoreEntitySet="HRTransactions">
+          <ScalarProperty Name="HRTransactionTypId" ColumnName="HRTransactionTypeId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="effectiveDate" ColumnName="effectiveDate" />
+          <ScalarProperty Name="createdFor" ColumnName="createdFor" />
+          <ScalarProperty Name="createdOn" ColumnName="createdOn" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="statusId" ColumnName="statusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(xCRSModel.HRLaborReclassfication)">
+        <MappingFragment StoreEntitySet="HRTransactions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="GLC" ColumnName="GLC" />
+          <ScalarProperty Name="LaborGroup" ColumnName="LaborGroup" />
+          <ScalarProperty Name="LaborClass" ColumnName="LaborClass" />
+          <Condition ColumnName="discriminator" Value="1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(xCRSModel.HRChangeLocation)">
+        <MappingFragment StoreEntitySet="HRTransactions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="NewLocation" ColumnName="NewLocation" />
+          <ScalarProperty Name="CurrentLocation" ColumnName="CurrentLocation" />
+          <Condition ColumnName="discriminator" Value="3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(xCRSModel.HRChangeOrg)">
+        <MappingFragment StoreEntitySet="HRTransactions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="NewOrg" ColumnName="NewOrg" />
+          <ScalarProperty Name="CurrentOrg" ColumnName="CurrentOrg" />
+          <Condition ColumnName="discriminator" Value="6" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(xCRSModel.HRChangeWorktime)">
+        <MappingFragment StoreEntitySet="HRTransactions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="IsAWASubmitted" ColumnName="IsAWASubmitted" />
+          <ScalarProperty Name="IsTelework" ColumnName="IsTelework" />
+          <ScalarProperty Name="IsReturnToFullTime" ColumnName="IsReturnToFullTime" />
+          <ScalarProperty Name="IsFlexHours" ColumnName="IsFlexHours" />
+          <ScalarProperty Name="PartTimeRatio" ColumnName="PartTimeRatio" />
+          <ScalarProperty Name="IsFulltimer" ColumnName="IsFulltimer" />
+          <Condition ColumnName="discriminator" Value="5" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(xCRSModel.HRChangeTitle)">
+        <MappingFragment StoreEntitySet="HRTransactions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="IsExempt" ColumnName="IsExempt" />
+          <ScalarProperty Name="DirectoryTitle" ColumnName="DirectoryTitle" />
+          <ScalarProperty Name="NewTitle" ColumnName="NewTitle" />
+          <Condition ColumnName="discriminator" Value="2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(xCRSModel.HRChangeBoss)">
+        <MappingFragment StoreEntitySet="HRTransactions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="TimesheetApprover" ColumnName="TimesheetApprover" />
+          <ScalarProperty Name="ChangeTimesheetApprover" ColumnName="ChangeTimesheetApprover" />
+          <ScalarProperty Name="IsNewbossInSameOrg" ColumnName="IsNewbossInSameOrg" />
+          <ScalarProperty Name="NewBoss" ColumnName="NewBoss" />
+          <ScalarProperty Name="CurrentBoss" ColumnName="CurrentBoss" />
+          <Condition ColumnName="discriminator" Value="4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRTransactionStatus">
+      <EntityTypeMapping TypeName="xCRSModel.HRTransactionStatu">
+        <MappingFragment StoreEntitySet="HRTransactionStatus">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdOn" ColumnName="createdOn" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedOn" ColumnName="updatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRTransactionTypes">
+      <EntityTypeMapping TypeName="xCRSModel.HRTransactionType">
+        <MappingFragment StoreEntitySet="HRTransactionTypes">
+          <ScalarProperty Name="updatedOn" ColumnName="updatedOn" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="createdOn" ColumnName="createdOn" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

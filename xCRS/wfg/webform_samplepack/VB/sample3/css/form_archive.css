@@ -1,0 +1,251 @@
+/*----------------------------------------------*/
+/*	Styles 										*/
+/*	11/06/2004									*/
+/*----------------------------------------------*/
+
+/* Standard 	 								*/
+/*----------------------------------------------*/
+BODY{
+	color:black;
+	font-family:Tahoma;
+	font-size:8pt;
+}
+
+a
+{
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+}
+
+a:visited
+{
+}
+
+a:hover
+{
+	text-decoration: underline;
+}
+
+.TextBoxes
+{
+	border-style:solid;
+	border-width:1px;
+	border-color:gray;
+	font-family:Arial;
+	font-size:8pt;
+}
+
+
+.TextBoxes-readonly
+{
+	border-style:solid;
+	border-width:1px;
+	border-color:gray;
+	font-family:Arial;
+	font-size:8pt;
+}
+
+
+.TextBoxes-required
+{
+	border-style:solid;
+	border-width:1px;
+	font-family:Arial;
+	font-size:8pt;
+}
+
+.RadioButtonLists
+{
+	font-family:Arial;
+	font-size:8pt;
+}
+
+.RadioButtonLists-required
+{
+    font-family:Arial;
+	font-size:8pt;
+}
+
+.RadioButtonLists-readonly
+{
+    font-family:Arial;
+	font-size:8pt;
+}
+		
+/*----------------------------------------------*/
+/* Title										*/
+/*----------------------------------------------*/
+.Form-title-text {
+	font-family:Tahoma;
+	font-size:18pt;
+}
+
+
+/*----------------------------------------------*/
+/* Table		 								*/
+/*----------------------------------------------*/
+
+.Form-table {
+	border-color:lightgrey;
+	border-width:1px;
+	border-style:solid;
+	padding:2px;
+}
+
+.Form-table-editable {
+	background-color:white;
+	border-color:black;
+	border-width:1px;
+	border-style:solid;
+	padding:2px;
+}
+
+.Form-table-a {
+
+}
+
+.Form-table-edit {
+}
+
+.Form-table-title {
+	background-color:lightgrey;
+	color:black;
+	padding:2px;
+}
+
+.Form-table-title-editable{
+	background-color:lightgrey;
+	color:black;
+	padding:2px;
+}
+
+.Form-table-title-text {
+	font-family:Tahoma;
+	font-size:8pt;
+	font-weight:bold;
+}
+
+.Form-table-cell {
+	font-family:Tahoma;
+	font-size:8pt;
+	font-weight:normal;
+	padding-left:5px;
+	color:black;	
+	vertical-align:middle;
+}
+
+.Form-table-cell-value {
+	font-family:Tahoma;
+	font-size:8pt;
+	font-weight:normal;
+	padding-left:5px;
+	color:black;
+}
+
+.Form-table-cell-label {
+	font-family:Tahoma;
+	font-size:8pt;
+	font-weight:bold;
+	padding-left:5px;
+	color:black;
+}
+
+.Form-title-link {
+	font-family:Tahoma;
+	font-size:8pt;
+	font-weight:bold;
+}
+
+.Form-table-cell-text {
+	font-family:Tahoma;
+	font-size:8pt;
+	font-weight:bold;
+	color:black;
+}
+
+.Form-input
+{
+	border-style:solid;
+	border-width:1px;
+	border-color:gray;
+	font-family:Arial;
+	font-size:8pt;
+}	
+
+/*----------------------------------------------*/
+/* table approval								*/
+/*----------------------------------------------*/
+
+.Form-table-approval {
+	border-color:gray;
+	border-width:1px;
+	border-style:solid;
+	padding:2px;
+}
+
+.Form-table-approval-title {
+	background-color:lightgrey;
+	color:black;
+	padding:2px;
+}
+
+.Form-table-approval-cell-text {
+	font-family:Tahoma;
+	font-size:8pt;
+	font-weight:normal;
+	padding-left:5px;
+	border-bottom-color:#808080;
+	border-bottom-width:1;
+	border-style:solid;
+	border-left-width:0;
+	border-right-width:0;
+	border-top-width:0;
+	color:black;
+}
+
+
+/*----------------------------------------------*/
+/* filter 										*/
+/*----------------------------------------------*/
+
+.Form-table-cell-input{
+	font-family:Tahoma;
+	font-size:8pt;
+	font-weight:normal;
+	padding-left:5px;
+}
+
+/*----------------------------------------------*/
+/* Error 										*/
+/*----------------------------------------------*/
+
+.Error-title-text
+{
+	color:red;
+	font-size:14pt;
+	font-family:Arial,Helv;
+	font-weight:bold;
+}
+
+.Error-body
+{	
+	background-color:#eeeeee;
+}
+
+.Error-body-cell
+{
+	color:black;
+	font-size:8pt;
+	font-family:Tahoma,Arial,Helv;
+	font-weight:bold;
+}
+
+.Error-body-link
+{
+	color: #336699;
+	font-size:8pt;
+	font-family:Tahoma,Arial,Helv;
+	font-weight:normal;
+}

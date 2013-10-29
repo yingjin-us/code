@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Black_S]
+    AUTHORIZATION [Black_S];
+

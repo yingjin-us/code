@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Sigman_R]
+    AUTHORIZATION [Sigman_R];
+

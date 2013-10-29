@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Byrne_L]
+    AUTHORIZATION [Byrne_L];
+

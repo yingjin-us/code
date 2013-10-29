@@ -1,0 +1,3 @@
+﻿CREATE USER [Orwin_R] FOR LOGIN [Orwin_R]
+    WITH DEFAULT_SCHEMA = [Orwin_R];
+

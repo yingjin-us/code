@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Jones_T]
+    AUTHORIZATION [Jones_T];
+

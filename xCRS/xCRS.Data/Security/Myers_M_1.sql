@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Myers_M]
+    AUTHORIZATION [Myers_M];
+

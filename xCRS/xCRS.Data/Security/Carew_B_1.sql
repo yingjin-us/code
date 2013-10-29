@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Carew_B]
+    AUTHORIZATION [Carew_B];
+

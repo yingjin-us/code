@@ -1,0 +1,3 @@
+﻿CREATE USER [Rust_K] FOR LOGIN [Rust_K]
+    WITH DEFAULT_SCHEMA = [Rust_K];
+

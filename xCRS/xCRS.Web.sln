@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xCRS.Web", "xCRS.Web\xCRS.Web.csproj", "{9E99472F-7C50-4FFE-A159-3CF249068B7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xCRS.Web.Tests", "xCRS.Web.Tests\xCRS.Web.Tests.csproj", "{74DA9D65-09D3-4031-A611-8A65BE8A3426}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLayer", "BusinessLayer", "{86B2917F-9BC9-4A66-961B-F73262253CE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xCRS.CoreModel", "xCRS.CoreModel\xCRS.CoreModel.csproj", "{D46EA79B-4053-4708-B6ED-E641F99EE2FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xCRS.IServices", "xCRS.IServices\xCRS.IServices.csproj", "{B7C69778-FE9A-4840-B019-677B92E4EAB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xCRS.Services", "xCRS.Services\xCRS.Services.csproj", "{97D4FDC2-659B-49E5-ACEA-A6E307076B03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xCRS.Entities", "xCRS.Entities\xCRS.Entities.csproj", "{8145F7E6-CB27-41E7-974E-F05FEB0BB0F4}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 7
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = xCRS.CoreModel\\xCRS.CoreModel.csproj
+		SccProjectTopLevelParentUniqueName1 = xCRS.Web.sln
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = xCRS.CoreModel\\
+		SccProjectUniqueName2 = xCRS.Entities\\xCRS.Entities.csproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = xCRS.Entities\\
+		SccProjectUniqueName3 = xCRS.IServices\\xCRS.IServices.csproj
+		SccProjectTopLevelParentUniqueName3 = xCRS.Web.sln
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = xCRS.IServices\\
+		SccProjectUniqueName4 = xCRS.Services\\xCRS.Services.csproj
+		SccProjectTopLevelParentUniqueName4 = xCRS.Web.sln
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = xCRS.Services\\
+		SccProjectUniqueName5 = xCRS.Web.Tests\\xCRS.Web.Tests.csproj
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = xCRS.Web.Tests\\
+		SccProjectUniqueName6 = xCRS.Web\\xCRS.Web.csproj
+		SccLocalPath6 = .
+		SccProjectFilePathRelativizedFromConnection6 = xCRS.Web\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E99472F-7C50-4FFE-A159-3CF249068B7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E99472F-7C50-4FFE-A159-3CF249068B7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E99472F-7C50-4FFE-A159-3CF249068B7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E99472F-7C50-4FFE-A159-3CF249068B7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74DA9D65-09D3-4031-A611-8A65BE8A3426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74DA9D65-09D3-4031-A611-8A65BE8A3426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74DA9D65-09D3-4031-A611-8A65BE8A3426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74DA9D65-09D3-4031-A611-8A65BE8A3426}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D46EA79B-4053-4708-B6ED-E641F99EE2FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D46EA79B-4053-4708-B6ED-E641F99EE2FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D46EA79B-4053-4708-B6ED-E641F99EE2FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D46EA79B-4053-4708-B6ED-E641F99EE2FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7C69778-FE9A-4840-B019-677B92E4EAB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7C69778-FE9A-4840-B019-677B92E4EAB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7C69778-FE9A-4840-B019-677B92E4EAB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7C69778-FE9A-4840-B019-677B92E4EAB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97D4FDC2-659B-49E5-ACEA-A6E307076B03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97D4FDC2-659B-49E5-ACEA-A6E307076B03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97D4FDC2-659B-49E5-ACEA-A6E307076B03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97D4FDC2-659B-49E5-ACEA-A6E307076B03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8145F7E6-CB27-41E7-974E-F05FEB0BB0F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8145F7E6-CB27-41E7-974E-F05FEB0BB0F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8145F7E6-CB27-41E7-974E-F05FEB0BB0F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8145F7E6-CB27-41E7-974E-F05FEB0BB0F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D46EA79B-4053-4708-B6ED-E641F99EE2FA} = {86B2917F-9BC9-4A66-961B-F73262253CE0}
+		{B7C69778-FE9A-4840-B019-677B92E4EAB6} = {86B2917F-9BC9-4A66-961B-F73262253CE0}
+		{97D4FDC2-659B-49E5-ACEA-A6E307076B03} = {86B2917F-9BC9-4A66-961B-F73262253CE0}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Newman_P]
+    AUTHORIZATION [Newman_P];
+

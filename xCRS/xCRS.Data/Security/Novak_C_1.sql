@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Novak_C]
+    AUTHORIZATION [Novak_C];
+

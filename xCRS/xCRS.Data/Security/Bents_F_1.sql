@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Bents_F]
+    AUTHORIZATION [Bents_F];
+

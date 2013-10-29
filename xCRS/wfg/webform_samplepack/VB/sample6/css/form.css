@@ -1,0 +1,333 @@
+/*----------------------------------------------*/
+/*	Styles 										*/
+/*	11/06/2004									*/
+/*----------------------------------------------*/
+
+/* Standard 	 								*/
+/*----------------------------------------------*/
+BODY
+{
+	color:black;
+	font-family:Tahoma;
+	font-size:8pt;
+	margin: 0px 0px 0px 0px;
+	scrollbar-face-color: #D6DFFF;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-shadow-color: #E8EFF7;
+	scrollbar-3dlight-color: #D0DFE7;
+	scrollbar-arrow-color:  #1144BB;
+	scrollbar-track-color: #F5F8FB;
+	scrollbar-darkshadow-color: #98AAB1;
+	background-color:white;
+	
+}
+
+INPUT
+{
+    font-size:8pt;
+}
+
+SELECT
+{
+    font-size:8pt;
+}
+
+
+.Link
+{
+	color: #4d4db8;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+}
+
+.Link:visited
+{
+}
+
+.Link:hover
+{
+	text-decoration: underline;
+}
+
+.TextBoxes
+{
+	border-style:solid;
+	border-width:1px;
+	border-color:#7F9DB9;
+	font-family:Arial;
+	font-size:8pt;
+}
+
+.TextBoxes-readonly
+{
+	border-style:solid;
+	border-width:1px;
+	border-color:gray;
+	font-family:Arial;
+	font-size:8pt;
+}
+
+.TextBoxes-required
+{
+	border-style:solid;
+	border-width:1px;
+	border-color:red;
+	font-family:Arial;
+	font-size:8pt;
+}
+
+.RadioButtonLists
+{
+	font-family:Arial;
+	font-size:8pt;
+}
+
+.RadioButtonLists-required
+{
+    font-family:Arial;
+	font-size:8pt;
+	color:Red;
+}
+
+.RadioButtonLists-readonly
+{
+    font-family:Arial;
+	font-size:8pt;
+}
+
+.SubmitButton
+{
+    border-style:solid;
+	border-width:1px;
+	border-color:#6B696B;
+	font-family:Arial;
+	font-size:8pt;
+	padding-right:8px;
+	padding-left:8px;
+	padding-top:3px;
+	padding-bottom:3px;
+	font-weight: bold;
+	color:#FFFFFF;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#E6E6E6', EndColorStr='#6B696B');
+}
+
+
+.nobdr
+{
+	border-width:0px;
+} 
+
+
+		
+/*----------------------------------------------*/
+/* Title										*/
+/*----------------------------------------------*/
+
+.Form-title-text {
+	font-family:Verdana;
+	font-size:14pt;
+	color:black;
+	padding:10px;
+}
+
+
+/*----------------------------------------------*/
+/* Table		 								*/
+/*----------------------------------------------*/
+
+.Form-table {
+	background-color:#e6e6e6;
+	border-color:gray;
+	border-width:1px;
+	border-style:solid;
+	padding:2px;
+}
+
+.Form-table-main 
+{
+    background-color:#FFFFFF;
+	padding:2px;
+	border: none; 
+}
+
+.Form-table-editable {
+	background-color:#EEEEEE;
+	border-color:gray;
+	border-width:1px;
+	border-style:solid;
+	padding:2px;
+}
+
+
+.Form-table-a {
+	background-color:#FBFDFF;
+}
+
+.Form-table-edit {
+	background-color:#EEEEEE;
+}
+
+.Form-table-title {
+	background-color:white;
+	color:black;
+	padding:2px;
+	padding-left:8px;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='white', EndColorStr='#E8E8E8');
+}
+
+.Form-table-title-editable{
+	background-color:#E4EAFF;
+	color:#ffcc00;
+	padding:2px;
+	padding-left:8px;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#036002', EndColorStr='#003300');
+}
+
+.Form-table-title-text {
+	font-family:Tahoma;
+	font-size:8pt;
+	font-weight:bold;
+	color:black;
+}
+
+.Form-title-gradient
+{
+    font-family:Tahoma;
+	font-size:8pt;
+	font-weight:bold;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#E4EAFF', EndColorStr='white');
+}
+
+.Form-title-gradient-inversed
+{
+    font-family:Tahoma;
+	font-size:8pt;
+	font-weight:bold;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='white', EndColorStr='#E4EAFF');
+}
+
+.Form-table-cell {
+	font-family:Tahoma;
+	font-size:8pt;
+	font-weight:normal;
+	padding-left:5px;
+	color:black;	
+	vertical-align:middle;
+}
+
+.Form-table-cell-value {
+	font-family:Tahoma;
+	font-size:8pt;
+	font-weight:normal;
+	padding-left:5px;
+	color:black;
+}
+
+.Form-table-cell-label {
+	font-family:Tahoma;
+	font-size:8pt;
+	font-weight:bold;
+	padding-left:5px;
+	color:black;
+}
+
+.Form-title-link {
+	font-family:Tahoma;
+	font-size:8pt;
+	font-weight:bold;
+	color:#1E3C7B;
+}
+
+.Form-table-cell-text {
+	font-family:Tahoma;
+	font-size:8pt;
+	font-weight:bold;
+	color:black;
+}
+
+.Form-input
+{
+	border-style:solid;
+	border-width:1px;
+	border-color:#7F9DB9;
+	font-family:Arial;
+	font-size:8pt;
+}	
+
+/*----------------------------------------------*/
+/* table approval								*/
+/*----------------------------------------------*/
+
+.Form-table-approval {
+	border-color:#808080;
+	border-width:1px;
+	border-style:solid;
+	background-color:#EEEEEE;
+	padding:2px;
+}
+
+.Form-table-approval-title {
+	color:white;
+	padding:2px;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#C0C0C0', EndColorStr='#808080');
+}
+
+.Form-table-approval-cell-text {
+	font-family:Tahoma;
+	font-size:8pt;
+	font-weight:normal;
+	padding-left:5px;
+	border-bottom-color:#808080;
+	border-bottom-width:1;
+	border-style:solid;
+	border-left-width:0;
+	border-right-width:0;
+	border-top-width:0;
+	color:black;
+}
+
+
+/*----------------------------------------------*/
+/* filter 										*/
+/*----------------------------------------------*/
+
+.Form-table-cell-input{
+	font-family:Tahoma;
+	font-size:8pt;
+	font-weight:normal;
+	padding-left:5px;
+}
+
+/*----------------------------------------------*/
+/* Error 										*/
+/*----------------------------------------------*/
+
+.Error-title-text
+{
+	color:red;
+	font-size:14pt;
+	font-family:Arial,Helv;
+	font-weight:bold;
+}
+
+.Error-body
+{	
+	background-color:#eeeeee;
+}
+
+.Error-body-cell
+{
+	color:black;
+	font-size:8pt;
+	font-family:Tahoma,Arial,Helv;
+	font-weight:bold;
+}
+
+.Error-body-link
+{
+	color: #336699;
+	font-size:8pt;
+	font-family:Tahoma,Arial,Helv;
+	font-weight:normal;
+}

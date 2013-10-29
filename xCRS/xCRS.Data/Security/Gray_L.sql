@@ -1,0 +1,3 @@
+﻿CREATE USER [Gray_L] FOR LOGIN [Gray_L]
+    WITH DEFAULT_SCHEMA = [Gray_L];
+

@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Marker_D]
+    AUTHORIZATION [Marker_D];
+

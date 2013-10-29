@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Fraser_A]
+    AUTHORIZATION [Fraser_A];
+

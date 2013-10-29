@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Crosse_S]
+    AUTHORIZATION [Crosse_S];
+

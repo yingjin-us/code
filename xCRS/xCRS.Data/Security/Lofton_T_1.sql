@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Lofton_T]
+    AUTHORIZATION [Lofton_T];
+

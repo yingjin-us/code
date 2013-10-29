@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [OBrien_B]
+    AUTHORIZATION [OBrien_B];
+

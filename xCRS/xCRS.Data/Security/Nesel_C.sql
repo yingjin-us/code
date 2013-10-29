@@ -1,0 +1,3 @@
+﻿CREATE USER [Nesel_C] FOR LOGIN [Nesel_C]
+    WITH DEFAULT_SCHEMA = [Nesel_C];
+

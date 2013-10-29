@@ -1,0 +1,3 @@
+﻿CREATE USER [Love_C] FOR LOGIN [Love_C]
+    WITH DEFAULT_SCHEMA = [Love_C];
+

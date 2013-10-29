@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Brick_M]
+    AUTHORIZATION [Brick_M];
+

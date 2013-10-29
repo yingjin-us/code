@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Durako_S]
+    AUTHORIZATION [Durako_S];
+

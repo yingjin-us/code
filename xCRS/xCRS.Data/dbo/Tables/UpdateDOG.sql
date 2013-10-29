@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[UpdateDOG] (
+    [WINS] FLOAT (53)    NULL,
+    [DOG]  SMALLDATETIME NULL
+);
+

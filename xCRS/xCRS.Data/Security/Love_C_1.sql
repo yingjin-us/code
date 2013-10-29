@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Love_C]
+    AUTHORIZATION [Love_C];
+

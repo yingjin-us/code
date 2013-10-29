@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Allen_B]
+    AUTHORIZATION [Allen_B];
+

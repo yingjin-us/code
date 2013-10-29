@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Vicars_D]
+    AUTHORIZATION [Vicars_D];
+

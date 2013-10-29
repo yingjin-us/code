@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Hartge_J]
+    AUTHORIZATION [Hartge_J];
+

@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Berlin_M]
+    AUTHORIZATION [Berlin_M];
+

@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Hubble_D]
+    AUTHORIZATION [Hubble_D];
+

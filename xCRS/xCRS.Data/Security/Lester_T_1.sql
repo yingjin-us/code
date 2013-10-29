@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Lester_T]
+    AUTHORIZATION [Lester_T];
+

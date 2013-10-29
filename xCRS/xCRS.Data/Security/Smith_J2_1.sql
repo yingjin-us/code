@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Smith_J2]
+    AUTHORIZATION [Smith_J2];
+

@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Dianis_N]
+    AUTHORIZATION [Dianis_N];
+

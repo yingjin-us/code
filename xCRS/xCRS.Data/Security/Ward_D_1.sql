@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Ward_D]
+    AUTHORIZATION [Ward_D];
+

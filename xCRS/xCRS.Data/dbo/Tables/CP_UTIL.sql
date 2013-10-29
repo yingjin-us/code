@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[CP_UTIL] (
+    [EMPL_ID]   FLOAT (53) NULL,
+    [WORKED]    FLOAT (53) NULL,
+    [AVAILABLE] FLOAT (53) NULL,
+    [UTIL]      FLOAT (53) NULL
+);
+

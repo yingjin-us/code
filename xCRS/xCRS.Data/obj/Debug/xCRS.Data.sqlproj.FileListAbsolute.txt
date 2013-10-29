@@ -1,0 +1,10 @@
+C:\xCRS\xCRS.Data\bin\Debug\xCRS.Data.dacpac
+C:\xCRS\xCRS.Data\obj\Debug\Model.xml
+C:\xCRS\xCRS.Data\obj\Debug\refactor.xml
+C:\xCRS\xCRS.Data\obj\Debug\postdeploy.sql
+C:\xCRS\xCRS.Data\obj\Debug\predeploy.sql
+C:\xCRS\xCRS.Data\obj\Debug\xCRS.Data.dll
+C:\xCRS\xCRS.Data\obj\Debug\xCRS.Data.pdb
+C:\xCRS\xCRS.Data\bin\Debug\xCRS.Data_Create.sql
+C:\xCRS\xCRS.Data\bin\Debug\xCRS.Data.dll
+C:\xCRS\xCRS.Data\bin\Debug\xCRS.Data.pdb

@@ -1,0 +1,3 @@
+﻿CREATE USER [Handy_R] FOR LOGIN [Handy_R]
+    WITH DEFAULT_SCHEMA = [Handy_R];
+

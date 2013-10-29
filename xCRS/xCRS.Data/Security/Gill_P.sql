@@ -1,0 +1,3 @@
+﻿CREATE USER [Gill_P] FOR LOGIN [Gill_P]
+    WITH DEFAULT_SCHEMA = [Gill_P];
+

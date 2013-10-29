@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Fears_S]
+    AUTHORIZATION [Fears_S];
+

@@ -1,0 +1,3 @@
+﻿CREATE USER [Helba_C] FOR LOGIN [Helba_C]
+    WITH DEFAULT_SCHEMA = [Helba_C];
+

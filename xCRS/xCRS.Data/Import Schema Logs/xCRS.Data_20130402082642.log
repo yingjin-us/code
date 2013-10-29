@@ -1,0 +1,71 @@
+4/2/2013 4:26:42 PM	This log contains information about the import schema operation into project 'xCRS.Data' on computer 'A56662' by user 'JIN_Y'.
+4/2/2013 4:26:43 PM	Import of database schema has started.
+4/2/2013 4:26:51 PM	Gathering database options
+4/2/2013 4:26:51 PM	Gathering users
+4/2/2013 4:26:51 PM	Gathering roles
+4/2/2013 4:26:51 PM	Gathering application roles
+4/2/2013 4:26:51 PM	Gathering role memberships
+4/2/2013 4:26:51 PM	Gathering filegroups
+4/2/2013 4:26:51 PM	Gathering full-text catalogs
+4/2/2013 4:26:51 PM	Gathering assemblies
+4/2/2013 4:26:51 PM	Gathering certificates
+4/2/2013 4:26:51 PM	Gathering asymmetric keys
+4/2/2013 4:26:51 PM	Gathering symmetric keys
+4/2/2013 4:26:51 PM	Gathering encrypted symmetric keys
+4/2/2013 4:26:51 PM	Gathering schemas
+4/2/2013 4:26:51 PM	Gathering XML schema collections
+4/2/2013 4:26:51 PM	Gathering user-defined data types
+4/2/2013 4:26:51 PM	Gathering user-defined types
+4/2/2013 4:26:51 PM	Gathering table types
+4/2/2013 4:26:51 PM	Gathering unique keys for table types
+4/2/2013 4:26:51 PM	Gathering primary keys for table types
+4/2/2013 4:26:51 PM	Gathering check constraints for table types
+4/2/2013 4:26:51 PM	Gathering default constraints for table types
+4/2/2013 4:26:51 PM	Gathering partition functions
+4/2/2013 4:26:51 PM	Gathering partition schemes
+4/2/2013 4:26:51 PM	Gathering functions
+4/2/2013 4:26:51 PM	Gathering encrypted functions
+4/2/2013 4:26:51 PM	Gathering aggregates
+4/2/2013 4:26:51 PM	Gathering procedures
+4/2/2013 4:26:51 PM	Gathering encrypted procedures
+4/2/2013 4:26:51 PM	Gathering tables
+4/2/2013 4:26:51 PM	Gathering primary keys
+4/2/2013 4:26:51 PM	Gathering unique constraints
+4/2/2013 4:26:51 PM	Gathering foreign keys
+4/2/2013 4:26:51 PM	Gathering default constraints
+4/2/2013 4:26:51 PM	Gathering check constraints
+4/2/2013 4:26:51 PM	Gathering views
+4/2/2013 4:26:52 PM	Gathering encrypted views
+4/2/2013 4:26:52 PM	Gathering indexes
+4/2/2013 4:26:52 PM	Gathering statistics
+4/2/2013 4:26:52 PM	Gathering full-text index stoplists
+4/2/2013 4:26:52 PM	Gathering full-text indexes
+4/2/2013 4:26:52 PM	Gathering spatial indexes
+4/2/2013 4:26:52 PM	Gathering XML indexes
+4/2/2013 4:26:52 PM	Gathering encrypted triggers
+4/2/2013 4:26:52 PM	Gathering triggers
+4/2/2013 4:26:52 PM	Gathering encrypted and clr ddl triggers
+4/2/2013 4:26:52 PM	Gathering ddl triggers
+4/2/2013 4:26:52 PM	Gathering synonyms
+4/2/2013 4:26:52 PM	Gathering defaults
+4/2/2013 4:26:52 PM	Gathering data constraint uddt bindings
+4/2/2013 4:26:52 PM	Gathering rules
+4/2/2013 4:26:52 PM	Gathering data constraint uddt bindings
+4/2/2013 4:26:52 PM	Gathering message types
+4/2/2013 4:26:52 PM	Gathering queues
+4/2/2013 4:26:52 PM	Gathering contracts
+4/2/2013 4:26:52 PM	Gathering services
+4/2/2013 4:26:52 PM	Gathering event notifications
+4/2/2013 4:26:52 PM	Gathering remote service bindings
+4/2/2013 4:26:52 PM	Gathering broker priorities
+4/2/2013 4:26:52 PM	Gathering signatures
+4/2/2013 4:26:52 PM	Gathering data compression options
+4/2/2013 4:26:52 PM	Gathering extended properties
+4/2/2013 4:26:52 PM	Gathering credentials
+4/2/2013 4:26:52 PM	Gathering logins
+4/2/2013 4:26:52 PM	Gathering server audits
+4/2/2013 4:26:53 PM	Scanning project for duplicate elements
+4/2/2013 4:26:53 PM	Finished duplicate element processing
+4/2/2013 4:26:57 PM	Finished importing database.
+4/2/2013 4:26:57 PM	A summary of the import was saved to the following location: C:\xCRS\xCRS.Data\Import Schema Logs\xCRS.Data_20130402082642.log
+4/2/2013 4:26:57 PM	Click Finish to continue...

@@ -1,0 +1,3 @@
+﻿CREATE USER [Nieva_V] FOR LOGIN [Nieva_V]
+    WITH DEFAULT_SCHEMA = [Nieva_V];
+

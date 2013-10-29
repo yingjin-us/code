@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="xCRSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="xCRSModelStoreContainer">
+          <EntitySet Name="HRTransactionHistory" EntityType="xCRSModel.Store.HRTransactionHistory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HRTransactions" EntityType="xCRSModel.Store.HRTransactions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HRTransactionStatus" EntityType="xCRSModel.Store.HRTransactionStatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HRTransactionTypes" EntityType="xCRSModel.Store.HRTransactionTypes" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_HRTransactionHistory_HRTransactions" Association="xCRSModel.Store.FK_HRTransactionHistory_HRTransactions">
+            <End Role="HRTransactions" EntitySet="HRTransactions" />
+            <End Role="HRTransactionHistory" EntitySet="HRTransactionHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HRTransactionHistory_HRTransactionStatus" Association="xCRSModel.Store.FK_HRTransactionHistory_HRTransactionStatus">
+            <End Role="HRTransactionStatus" EntitySet="HRTransactionStatus" />
+            <End Role="HRTransactionHistory" EntitySet="HRTransactionHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HRTransactions_HRTransactionStatus" Association="xCRSModel.Store.FK_HRTransactions_HRTransactionStatus">
+            <End Role="HRTransactionStatus" EntitySet="HRTransactionStatus" />
+            <End Role="HRTransactions" EntitySet="HRTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HRTransactions_HRTransactionTypes" Association="xCRSModel.Store.FK_HRTransactions_HRTransactionTypes">
+            <End Role="HRTransactionTypes" EntitySet="HRTransactionTypes" />
+            <End Role="HRTransactions" EntitySet="HRTransactions" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="HRTransactionHistory">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="HRTransactionid" Type="int" />
+          <Property Name="reviewedBy" Type="nvarchar" MaxLength="12" />
+          <Property Name="reviewedOn" Type="datetime" />
+          <Property Name="statusId" Type="int" />
+          <Property Name="reviewerNote" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="HRTransactions">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="statusId" Type="int" />
+          <Property Name="HRTransactionTypeId" Type="int" Nullable="false" />
+          <Property Name="createdBy" Type="nvarchar" MaxLength="12" />
+          <Property Name="createdOn" Type="datetime" />
+          <Property Name="createdFor" Type="nvarchar" MaxLength="12" />
+          <Property Name="effectiveDate" Type="datetime" />
+          <Property Name="note" Type="nvarchar(max)" />
+          <Property Name="LaborClass" Type="nvarchar" MaxLength="50" />
+          <Property Name="LaborGroup" Type="nvarchar" MaxLength="50" />
+          <Property Name="GLC" Type="nvarchar" MaxLength="50" />
+          <Property Name="NewTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="DirectoryTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsExempt" Type="bit" />
+          <Property Name="CurrentLocation" Type="nvarchar" MaxLength="50" />
+          <Property Name="NewLocation" Type="nvarchar" MaxLength="50" />
+          <Property Name="CurrentBoss" Type="nvarchar" MaxLength="12" />
+          <Property Name="NewBoss" Type="nvarchar" MaxLength="12" />
+          <Property Name="IsNewbossInSameOrg" Type="bit" />
+          <Property Name="ChangeTimesheetApprover" Type="bit" />
+          <Property Name="TimesheetApprover" Type="nvarchar" MaxLength="12" />
+          <Property Name="IsFulltimer" Type="bit" />
+          <Property Name="PartTimeRatio" Type="float" />
+          <Property Name="IsFlexHours" Type="bit" />
+          <Property Name="IsReturnToFullTime" Type="bit" />
+          <Property Name="IsTelework" Type="bit" />
+          <Property Name="IsAWASubmitted" Type="bit" />
+          <Property Name="CurrentOrg" Type="varchar" MaxLength="20" />
+          <Property Name="NewOrg" Type="varchar" MaxLength="20" />
+          <Property Name="discriminator" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HRTransactionStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="description" Type="nvarchar" MaxLength="200" />
+          <Property Name="createdBy" Type="nvarchar" MaxLength="12" />
+          <Property Name="createdOn" Type="datetime" />
+          <Property Name="updatedBy" Type="nvarchar" MaxLength="12" />
+          <Property Name="updatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="HRTransactionTypes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="description" Type="nvarchar(max)" />
+          <Property Name="createdBy" Type="nvarchar" MaxLength="12" />
+          <Property Name="createdOn" Type="datetime" />
+          <Property Name="updatedBy" Type="nvarchar" MaxLength="12" />
+          <Property Name="updatedOn" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_HRTransactionHistory_HRTransactions">
+          <End Role="HRTransactions" Type="xCRSModel.Store.HRTransactions" Multiplicity="0..1" />
+          <End Role="HRTransactionHistory" Type="xCRSModel.Store.HRTransactionHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HRTransactions">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HRTransactionHistory">
+              <PropertyRef Name="HRTransactionid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HRTransactionHistory_HRTransactionStatus">
+          <End Role="HRTransactionStatus" Type="xCRSModel.Store.HRTransactionStatus" Multiplicity="0..1" />
+          <End Role="HRTransactionHistory" Type="xCRSModel.Store.HRTransactionHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HRTransactionStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HRTransactionHistory">
+              <PropertyRef Name="statusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HRTransactions_HRTransactionStatus">
+          <End Role="HRTransactionStatus" Type="xCRSModel.Store.HRTransactionStatus" Multiplicity="0..1" />
+          <End Role="HRTransactions" Type="xCRSModel.Store.HRTransactions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HRTransactionStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HRTransactions">
+              <PropertyRef Name="statusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HRTransactions_HRTransactionTypes">
+          <End Role="HRTransactionTypes" Type="xCRSModel.Store.HRTransactionTypes" Multiplicity="1" />
+          <End Role="HRTransactions" Type="xCRSModel.Store.HRTransactions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HRTransactionTypes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HRTransactions">
+              <PropertyRef Name="HRTransactionTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="xCRSModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="xCRSContext" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="HRTransactionHistories" EntityType="xCRSModel.HRTransactionHistory" />
+          <EntitySet Name="HRTransactions" EntityType="xCRSModel.HRTransaction" />
+          <EntitySet Name="HRTransactionStatus1" EntityType="xCRSModel.HRTransactionStatus" />
+          <AssociationSet Name="FK_HRTransactionHistory_HRTransactions" Association="xCRSModel.FK_HRTransactionHistory_HRTransactions">
+            <End Role="HRTransactions" EntitySet="HRTransactions" />
+            <End Role="HRTransactionHistory" EntitySet="HRTransactionHistories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HRTransactionHistory_HRTransactionStatus" Association="xCRSModel.FK_HRTransactionHistory_HRTransactionStatus">
+            <End Role="HRTransactionStatus" EntitySet="HRTransactionStatus1" />
+            <End Role="HRTransactionHistory" EntitySet="HRTransactionHistories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HRTransactions_HRTransactionStatus" Association="xCRSModel.FK_HRTransactions_HRTransactionStatus">
+            <End Role="HRTransactionStatus" EntitySet="HRTransactionStatus1" />
+            <End Role="HRTransactions" EntitySet="HRTransactions" />
+          </AssociationSet>
+          <EntitySet Name="HRTransactionTypes" EntityType="xCRSModel.HRTransactionType" />
+          <AssociationSet Name="FK_HRTransactions_HRTransactionTypes" Association="xCRSModel.FK_HRTransactions_HRTransactionTypes">
+            <End Role="HRTransactionType" EntitySet="HRTransactionTypes" />
+            <End Role="HRTransaction" EntitySet="HRTransactions" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="HRTransactionHistory">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="HRTransactionid" Type="Int32" />
+          <Property Name="reviewedBy" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="reviewedOn" Type="DateTime" Precision="3" />
+          <Property Name="statusId" Type="Int32" />
+          <Property Name="reviewerNote" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="HRTransaction" Relationship="xCRSModel.FK_HRTransactionHistory_HRTransactions" FromRole="HRTransactionHistory" ToRole="HRTransactions" />
+          <NavigationProperty Name="HRTransactionStatu" Relationship="xCRSModel.FK_HRTransactionHistory_HRTransactionStatus" FromRole="HRTransactionHistory" ToRole="HRTransactionStatus" />
+        </EntityType>
+        <EntityType Name="HRTransaction" Abstract="true">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="statusId" Type="Int32" />
+          <Property Name="createdBy" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="createdOn" Type="DateTime" Precision="3" />
+          <Property Name="createdFor" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="effectiveDate" Type="DateTime" Precision="3" />
+          <Property Name="note" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="HRTransactionHistories" Relationship="xCRSModel.FK_HRTransactionHistory_HRTransactions" FromRole="HRTransactions" ToRole="HRTransactionHistory" />
+          <NavigationProperty Name="HRTransactionStatu" Relationship="xCRSModel.FK_HRTransactions_HRTransactionStatus" FromRole="HRTransactions" ToRole="HRTransactionStatus" />
+          <Property Type="Int32" Name="HRTransactionTypId" Nullable="false" />
+          <NavigationProperty Name="HRTransactionType" Relationship="xCRSModel.FK_HRTransactions_HRTransactionTypes" FromRole="HRTransaction" ToRole="HRTransactionType" />
+        </EntityType>
+        <EntityType Name="HRTransactionStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="description" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="createdBy" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="createdOn" Type="DateTime" Precision="3" />
+          <Property Name="updatedBy" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="updatedOn" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="HRTransactionHistories" Relationship="xCRSModel.FK_HRTransactionHistory_HRTransactionStatus" FromRole="HRTransactionStatus" ToRole="HRTransactionHistory" />
+          <NavigationProperty Name="HRTransactions" Relationship="xCRSModel.FK_HRTransactions_HRTransactionStatus" FromRole="HRTransactionStatus" ToRole="HRTransactions" />
+        </EntityType>
+        <Association Name="FK_HRTransactionHistory_HRTransactions">
+          <End Role="HRTransactions" Type="xCRSModel.HRTransaction" Multiplicity="0..1" />
+          <End Role="HRTransactionHistory" Type="xCRSModel.HRTransactionHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HRTransactions">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HRTransactionHistory">
+              <PropertyRef Name="HRTransactionid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HRTransactionHistory_HRTransactionStatus">
+          <End Role="HRTransactionStatus" Type="xCRSModel.HRTransactionStatus" Multiplicity="0..1" />
+          <End Role="HRTransactionHistory" Type="xCRSModel.HRTransactionHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HRTransactionStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HRTransactionHistory">
+              <PropertyRef Name="statusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HRTransactions_HRTransactionStatus">
+          <End Role="HRTransactionStatus" Type="xCRSModel.HRTransactionStatus" Multiplicity="0..1" />
+          <End Role="HRTransactions" Type="xCRSModel.HRTransaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HRTransactionStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HRTransactions">
+              <PropertyRef Name="statusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="HRLaborReclassfication" BaseType="xCRSModel.HRTransaction" >
+          <Property Type="String" Name="LaborClass" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LaborGroup" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GLC" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="HRChangeTitle" BaseType="xCRSModel.HRTransaction" >
+          <Property Type="String" Name="NewTitle" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DirectoryTitle" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsExempt" />
+        </EntityType>
+        <EntityType Name="HRChangeLocation" BaseType="xCRSModel.HRTransaction" >
+          <Property Type="String" Name="CurrentLocation" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NewLocation" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="HRChangeBoss" BaseType="xCRSModel.HRTransaction" >
+          <Property Type="String" Name="CurrentBoss" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NewBoss" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsNewbossInSameOrg" />
+          <Property Type="Boolean" Name="ChangeTimesheetApprover" />
+          <Property Type="String" Name="TimesheetApprover" MaxLength="12" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="HRChangeWorktime" BaseType="xCRSModel.HRTransaction" >
+          <Property Type="Boolean" Name="IsFulltimer" />
+          <Property Type="Double" Name="PartTimeRatio" />
+          <Property Type="Boolean" Name="IsFlexHours" />
+          <Property Type="Boolean" Name="IsReturnToFullTime" />
+          <Property Type="Boolean" Name="IsTelework" />
+          <Property Type="Boolean" Name="IsAWASubmitted" />
+        </EntityType>
+        <EntityType Name="HRChangeOrg" BaseType="xCRSModel.HRTransaction" >
+          <Property Type="String" Name="CurrentOrg" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NewOrg" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="HRTransactionType">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="description" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="createdBy" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="createdOn" Precision="3" />
+          <Property Type="String" Name="updatedBy" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="updatedOn" Precision="3" />
+          <NavigationProperty Name="HRTransactions" Relationship="xCRSModel.FK_HRTransactions_HRTransactionTypes" FromRole="HRTransactionType" ToRole="HRTransaction" />
+        </EntityType>
+        <Association Name="FK_HRTransactions_HRTransactionTypes">
+          <End Type="xCRSModel.HRTransactionType" Role="HRTransactionType" Multiplicity="1" />
+          <End Type="xCRSModel.HRTransaction" Role="HRTransaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HRTransactionType">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HRTransaction">
+              <PropertyRef Name="HRTransactionTypId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="xCRSModelStoreContainer" CdmEntityContainer="xCRSContext">
+          <EntitySetMapping Name="HRTransactionHistories">
+            <EntityTypeMapping TypeName="xCRSModel.HRTransactionHistory">
+              <MappingFragment StoreEntitySet="HRTransactionHistory">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="HRTransactionid" ColumnName="HRTransactionid" />
+                <ScalarProperty Name="reviewedBy" ColumnName="reviewedBy" />
+                <ScalarProperty Name="reviewedOn" ColumnName="reviewedOn" />
+                <ScalarProperty Name="statusId" ColumnName="statusId" />
+                <ScalarProperty Name="reviewerNote" ColumnName="reviewerNote" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HRTransactions">
+            <EntityTypeMapping TypeName="IsTypeOf(xCRSModel.HRTransaction)">
+              <MappingFragment StoreEntitySet="HRTransactions">
+                <ScalarProperty Name="HRTransactionTypId" ColumnName="HRTransactionTypeId" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="effectiveDate" ColumnName="effectiveDate" />
+                <ScalarProperty Name="createdFor" ColumnName="createdFor" />
+                <ScalarProperty Name="createdOn" ColumnName="createdOn" />
+                <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+                <ScalarProperty Name="statusId" ColumnName="statusId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(xCRSModel.HRLaborReclassfication)">
+              <MappingFragment StoreEntitySet="HRTransactions">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="GLC" ColumnName="GLC" />
+                <ScalarProperty Name="LaborGroup" ColumnName="LaborGroup" />
+                <ScalarProperty Name="LaborClass" ColumnName="LaborClass" />
+                <Condition ColumnName="discriminator" Value="1" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(xCRSModel.HRChangeLocation)">
+              <MappingFragment StoreEntitySet="HRTransactions">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="NewLocation" ColumnName="NewLocation" />
+                <ScalarProperty Name="CurrentLocation" ColumnName="CurrentLocation" />
+                <Condition ColumnName="discriminator" Value="3" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(xCRSModel.HRChangeOrg)">
+              <MappingFragment StoreEntitySet="HRTransactions">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="NewOrg" ColumnName="NewOrg" />
+                <ScalarProperty Name="CurrentOrg" ColumnName="CurrentOrg" />
+                <Condition ColumnName="discriminator" Value="6" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(xCRSModel.HRChangeWorktime)">
+              <MappingFragment StoreEntitySet="HRTransactions">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="IsAWASubmitted" ColumnName="IsAWASubmitted" />
+                <ScalarProperty Name="IsTelework" ColumnName="IsTelework" />
+                <ScalarProperty Name="IsReturnToFullTime" ColumnName="IsReturnToFullTime" />
+                <ScalarProperty Name="IsFlexHours" ColumnName="IsFlexHours" />
+                <ScalarProperty Name="PartTimeRatio" ColumnName="PartTimeRatio" />
+                <ScalarProperty Name="IsFulltimer" ColumnName="IsFulltimer" />
+                <Condition ColumnName="discriminator" Value="5" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(xCRSModel.HRChangeTitle)">
+              <MappingFragment StoreEntitySet="HRTransactions">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="IsExempt" ColumnName="IsExempt" />
+                <ScalarProperty Name="DirectoryTitle" ColumnName="DirectoryTitle" />
+                <ScalarProperty Name="NewTitle" ColumnName="NewTitle" />
+                <Condition ColumnName="discriminator" Value="2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(xCRSModel.HRChangeBoss)">
+              <MappingFragment StoreEntitySet="HRTransactions">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="TimesheetApprover" ColumnName="TimesheetApprover" />
+                <ScalarProperty Name="ChangeTimesheetApprover" ColumnName="ChangeTimesheetApprover" />
+                <ScalarProperty Name="IsNewbossInSameOrg" ColumnName="IsNewbossInSameOrg" />
+                <ScalarProperty Name="NewBoss" ColumnName="NewBoss" />
+                <ScalarProperty Name="CurrentBoss" ColumnName="CurrentBoss" />
+                <Condition ColumnName="discriminator" Value="4" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HRTransactionStatus1">
+            <EntityTypeMapping TypeName="xCRSModel.HRTransactionStatus">
+              <MappingFragment StoreEntitySet="HRTransactionStatus">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+                <ScalarProperty Name="createdOn" ColumnName="createdOn" />
+                <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+                <ScalarProperty Name="updatedOn" ColumnName="updatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HRTransactionTypes">
+            <EntityTypeMapping TypeName="xCRSModel.HRTransactionType">
+              <MappingFragment StoreEntitySet="HRTransactionTypes">
+                <ScalarProperty Name="updatedOn" ColumnName="updatedOn" />
+                <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+                <ScalarProperty Name="createdOn" ColumnName="createdOn" />
+                <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,97 @@
+﻿@model IEnumerable<xCRS.Entities.Models.HRTransactionType>
+
+@{
+    ViewBag.Title = "HRTransactionTypeView";
+}
+@section ViewSpecificScript
+{
+    <script type="text/javascript" src="/Scripts/get.js"></script>
+}
+<h2>HRTransactionTypeView</h2>
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<ul data-bind="template: {name: 'HRTransactionTypesTemplate', foreach: TransactionType}">
+</ul>
+@section scripts
+{
+    <script id="HRTransactionTypesTemplate" type="text/html">
+            <li class="span3">
+                <header>
+                    <div class="btn-group" data-toggle="buttons-radio">
+                        <button type="button" class="btn btn-primary" />
+                        <strong><span data-bind="text: name"></span></strong>
+                    </div>
+                </header>
+                <div class="body">
+                    <p data-bind="text: Text"></p>
+           
+                </div>
+            </li>
+        </script>
+
+        <script type="text/javascript">
+            viewModel = {
+                HRTransactionTypes: ko.observableArray([])
+            };
+
+            ko.applyBindings(viewModel);
+        </script>
+}
+@*
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.createdBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.createdOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.updatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.updatedOn)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.createdBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.createdOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.updatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.updatedOn)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
+*@

@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Segel_P]
+    AUTHORIZATION [Segel_P];
+

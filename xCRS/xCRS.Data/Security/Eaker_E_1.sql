@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Eaker_E]
+    AUTHORIZATION [Eaker_E];
+

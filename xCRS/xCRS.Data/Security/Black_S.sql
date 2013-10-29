@@ -1,0 +1,3 @@
+﻿CREATE USER [Black_S] FOR LOGIN [Black_S]
+    WITH DEFAULT_SCHEMA = [Black_S];
+

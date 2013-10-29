@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Binzer_G]
+    AUTHORIZATION [Binzer_G];
+

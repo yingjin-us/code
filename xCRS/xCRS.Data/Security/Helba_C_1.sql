@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Helba_C]
+    AUTHORIZATION [Helba_C];
+

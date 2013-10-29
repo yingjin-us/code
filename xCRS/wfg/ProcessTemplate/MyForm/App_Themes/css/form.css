@@ -1,0 +1,99 @@
+/*----------------------------------------------*/
+/*	Styles 										*/
+/*	21/02/2008									*/
+/*----------------------------------------------*/
+
+
+/* Standard 	 								*/
+/*----------------------------------------------*/
+
+
+BODY.WebForm {margin-left:14px;margin-right:5px;padding-left:1px;color: #4C4C4C;font-size: 11px;font-family: Arial;border:0px;background-image: url("../images/bg_main.jpg");background-repeat: repeat-x;}
+
+.WebForm .TitleHeader {font-size: 11px;padding-top:16px; width:100%}
+.WebForm .TitleHeader .Row {}
+.WebForm .TitleHeader .Row .CellIcon {white-space: nowrap;vertical-align: top;width:48px}
+.WebForm .TitleHeader .Row .CellIcon .Image {padding-left: 2px;margin-left: 0px;vertical-align: bottom;}
+.WebForm .TitleHeader .Row .CellTitle {white-space: nowrap;vertical-align: top;}
+.WebForm .TitleHeader .Row .CellTitle .Title {padding-left: 10px;font-size: 18px;color: #3A3A3A;font-weight: bold;vertical-align: top;}
+.WebForm .TitleHeader .Row .CellSubTitle {padding-top:15px;padding-bottom: 5px;padding-right:58px;text-align:right;}
+.WebForm .TitleHeader .Row .CellSubTitle .SubTitle {font-family :Tahoma;white-space: nowrap;font-size:8pt;color: #4C4C4C;}
+
+.WebForm .StatusDiv {margin-top:3px;margin-left:58px;width:90%; border-style:none; border-width:0px;}
+.WebForm .Status {margin-bottom:3px;border-style:none;border-width:0px;margin-top :0px;font-size: 11px;width:100%;}
+.WebForm .Status .ListRow {}
+.WebForm .Status .ListRow .CellValue .Label {font-weight: normal;color: green;font-family:Tahoma;}
+.WebForm .Status .ListRow .CellCaption {text-align: right;}
+
+.WebForm .PanelTitle {margin-left:58px; margin-top:0px;width:90%;background-color:#F4F4F4;filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#E1E1E1', EndColorStr='#FAFAFA');}
+.WebForm .PanelTitle .Title {width:100%;padding-top:0px;padding-bottom:5px;border-style: solid;border-width: 1px 1px 0px 1px;border-color: #D5D5D5;font-size: 11px;font-family:Tahoma;}
+.WebForm .PanelTitle .Title .ListRow {height:22;}
+.WebForm .PanelTitle .Title .ListRow .CellCaption {text-align:left;font-weight: normal; padding-left: 5px;border-style: solid;border-width: 0px 0px 0px 0px;border-color: #D5D5D5;}
+.WebForm .PanelTitle .Title .ListRow .CellCaption .LabelHeader {color: #4C4C4C;font-size:10pt;font-family:Tahoma; font-weight:bold;}
+
+.WebForm .PanelTitleActive {margin-left:58px; margin-top:0px;width:90%;background-color:#BBDCFE;filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#BBDCFE', EndColorStr='#FAFAFA');}
+.WebForm .PanelTitleActive .Title {width:100%;padding-top:0px;padding-bottom:5px;border-style: solid;border-width: 1px 1px 0px 1px;border-color: #D5D5D5;font-size: 11px;font-family:Tahoma;}
+.WebForm .PanelTitleActive .Title .ListRow {height:22;}
+.WebForm .PanelTitleActive .Title .ListRow .CellCaption {text-align:left;font-weight: normal; padding-left: 5px;border-style: solid;border-width: 0px 0px 0px 0px;border-color: #D5D5D5;}
+.WebForm .PanelTitleActive .Title .ListRow .CellCaption .LabelHeader {color: #4C4C4C;font-size:10pt;font-family:Tahoma; font-weight:bold;}
+
+.WebForm .PanelInfo {margin-left:58px; margin-top:0px;width:90%;background-color:#F4F4F4;filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#FAFAFA', EndColorStr='#F2F2F2');}
+.WebForm .PanelInfo .Info { padding-bottom:8px;width:100%;border-style: solid;border-width: 0px 1px 1px 1px;border-color: #D5D5D5;font-size: 11px;font-family:Tahoma;}
+.WebForm .PanelInfo .Info .ListRow {height:22;}
+.WebForm .PanelInfo .Info .ListRow .CellCaption {text-align:right;font-weight: normal; width :150px;padding-left: 5px;border-style: solid;border-width: 0px 0px 0px 0px;border-color: #D5D5D5;}
+.WebForm .PanelInfo .Info .ListRow .CellCaption .LabelHeader {color: #4C4C4C;font-size:8pt;font-family:Tahoma;}
+.WebForm .PanelInfo .Info .ListRow .CellValue {padding-left:5px;color: #4C4C4C;border-style: solid;border-width: 0px 0px 0px 0px;border-color: #D5D5D5;}
+.WebForm .PanelInfo .Info .ListRow .CellValue .InputText {font-family: Tahoma;font-size: 11px;width:330;margin-left: 1px;}
+.WebForm .PanelInfo .Info .ListRow .CellValue .InputTextRequired {font-family: Tahoma;font-size: 11px;width:330;margin-left: 1px; color:Red; border:solid 1px red;}
+.WebForm .PanelInfo .Info .ListRow .CellValue .Select {font-family:tahoma;font-size: 11px;width:355;}
+.WebForm .PanelInfo .Info .ListRow .CellValue .DataContainer {OVERFLOW:auto;Width:500px;border-color:#D5D5D5;border-width:1px 0px 0px 0px;border-style:solid;background-color:#EDF4F9;}
+.WebForm .PanelInfo .Info .ListRow .CellValue .ErrorContainer {OVERFLOW:auto;Width:500px;color:#E22B00;text-align: left;height:150px;word-wrap: break-word;padding-top:2px;}
+.WebForm .PanelInfo .Info .ListRow .CellValue .Link {color: #00309C;text-decoration: none;}
+.WebForm .PanelInfo .Info .ListRow .CellValue .Link:visited {}
+.WebForm .PanelInfo .Info .ListRow .CellValue .Link:hover {text-decoration: underline;}
+.WebForm .PanelInfo .Info .ListRow .CellValue .GridView {}
+.WebForm .PanelInfo .Info .ListRow .CellValue .GridView .Value {font-family: Tahoma;font-size: 11px;}
+.WebForm .PanelInfo .Info .ListRow .CellValue .GridView .Header {}
+.WebForm .PanelInfo .Info .ListRow .CellValue .GridView .Row { background-color:#C6C6C6;}
+.WebForm .PanelInfo .Info .ListRow .CellValue .GridView .AlternatingRow { background-color:Transparent;}
+
+.WebForm .PanelInfoActive {margin-left:58px; margin-top:0px;width:90%;background-color:#BBDCFE;filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#FAFAFA', EndColorStr='#BBDCFE');}
+.WebForm .PanelInfoActive .Info { padding-bottom:8px;width:100%;border-style: solid;border-width: 0px 1px 1px 1px;border-color: #D5D5D5;font-size: 11px;font-family:Tahoma;}
+.WebForm .PanelInfoActive .Info .ListRow {height:22;}
+.WebForm .PanelInfoActive .Info .ListRow .CellCaption {text-align:right;font-weight: normal; width :150px;padding-left: 5px;border-style: solid;border-width: 0px 0px 0px 0px;border-color: #D5D5D5;}
+.WebForm .PanelInfoActive .Info .ListRow .CellCaption .LabelHeader {color: #4C4C4C;font-size:8pt;font-family:Tahoma;}
+.WebForm .PanelInfoActive .Info .ListRow .CellValue {padding-left:5px;color: #4C4C4C;border-style: solid;border-width: 0px 0px 0px 0px;border-color: #D5D5D5;}
+.WebForm .PanelInfoActive .Info .ListRow .CellValue .InputText {font-family: Tahoma;font-size: 11px;width:330;margin-left: 1px;}
+.WebForm .PanelInfoActive .Info .ListRow .CellValue .InputTextRequired {font-family: Tahoma;font-size: 11px;width:330;margin-left: 1px; color:Red; border:solid 1px red;}
+.WebForm .PanelInfoActive .Info .ListRow .CellValue .Select {font-family:tahoma;font-size: 11px;width:355;}
+.WebForm .PanelInfoActive .Info .ListRow .CellValue .DataContainer {OVERFLOW:auto;Width:500px;border-color:#D5D5D5;border-width:1px 0px 0px 0px;border-style:solid;background-color:#EDF4F9;}
+.WebForm .PanelInfoActive .Info .ListRow .CellValue .ErrorContainer {OVERFLOW:auto;Width:500px;color:#E22B00;text-align: left;height:150px;word-wrap: break-word;padding-top:2px;}
+.WebForm .PanelInfoActive .Info .ListRow .CellValue .Link {color: #00309C;text-decoration: none;}
+.WebForm .PanelInfoActive .Info .ListRow .CellValue .Link:visited {}
+.WebForm .PanelInfoActive .Info .ListRow .CellValue .Link:hover {text-decoration: underline;}
+.WebForm .PanelInfoActive .Info .ListRow .CellValue .GridView {}
+.WebForm .PanelInfoActive .Info .ListRow .CellValue .GridView .Value {font-family: Tahoma;font-size: 11px;}
+.WebForm .PanelInfoActive .Info .ListRow .CellValue .GridView .Header { background-color:#6598DA;color:White}
+.WebForm .PanelInfoActive .Info .ListRow .CellValue .GridView .Row { background-color:#94C9FE;}
+.WebForm .PanelInfoActive .Info .ListRow .CellValue .GridView .AlternatingRow { background-color:Transparent;}
+
+
+
+
+.WebForm .ButtonDiv {margin-left:58px;margin-top:6px;margin-bottom:8px;}
+.WebForm .Button {}
+.WebForm .Button .ListRow {}
+.WebForm .Button .ListRow .CellButton {padding-right:5px;}
+.WebForm .Button .ListRow .CellButton .Label {}
+.WebForm .Button .ListRow .CellButton .Label .Button {}
+
+.WebForm  .HistoryTitle {margin-left:58px;}
+.WebForm  .HistoryTitle .HistoryTitle-Cell {}
+.WebForm  .HistoryTitle .HistoryTitle-Cell .HistoryTitle-Text{color: #4C4C4C;font-size:10pt;font-family:Tahoma; font-weight:bold;}
+.WebForm  .HistoryTable {margin-left:58px;}
+.WebForm  .HistoryTable  .HistoryHeader-Cell{ background-color:Menu; border-style: solid;border-width: 1px 1px 1px 1px;border-color: #D5D5D5;}
+.WebForm  .HistoryTable  .HistoryHeader-Cell .HistoryHeader-Text{color:MenuText;}
+.WebForm  .HistoryTable  .HistoryList-Cell{}
+.WebForm  .HistoryTable  .HistoryList-Cell .HistoryList-Text{}
+.WebForm  .HistoryTable  .HistoryList-Content{border-style: solid;border-width: 0px 0px 1px 1px;border-color: #D5D5D5;}
+

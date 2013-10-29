@@ -1,0 +1,3 @@
+﻿CREATE USER [Dymek_C] FOR LOGIN [Dymek_C]
+    WITH DEFAULT_SCHEMA = [Dymek_C];
+

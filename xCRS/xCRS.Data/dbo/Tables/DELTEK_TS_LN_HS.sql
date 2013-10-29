@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[DELTEK_TS_LN_HS] (
+    [Empl_ID]  VARCHAR (50)    NOT NULL,
+    [Bon_Type] VARCHAR (30)    NOT NULL,
+    [Bon_Amt]  DECIMAL (18, 2) NOT NULL,
+    [Bon_Date] DATETIME        NOT NULL,
+    CONSTRAINT [PK_DELTEK_TS_LN_HS] PRIMARY KEY CLUSTERED ([Empl_ID] ASC, [Bon_Type] ASC, [Bon_Date] ASC) WITH (FILLFACTOR = 90)
+);
+

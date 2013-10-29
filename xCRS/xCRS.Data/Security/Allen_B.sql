@@ -1,0 +1,3 @@
+﻿CREATE USER [Allen_B] FOR LOGIN [Allen_B]
+    WITH DEFAULT_SCHEMA = [Allen_B];
+

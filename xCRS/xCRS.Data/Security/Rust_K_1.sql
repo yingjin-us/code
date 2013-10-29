@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Rust_K]
+    AUTHORIZATION [Rust_K];
+

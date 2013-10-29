@@ -1,0 +1,3 @@
+﻿CREATE USER [Segel_P] FOR LOGIN [Segel_P]
+    WITH DEFAULT_SCHEMA = [Segel_P];
+

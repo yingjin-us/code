@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Hicks_W]
+    AUTHORIZATION [Hicks_W];
+

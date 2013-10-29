@@ -1,0 +1,15 @@
+﻿CREATE TABLE [dbo].[DELTEK_GENL_UDEF] (
+    [GENL_ID]      VARCHAR (30)    NOT NULL,
+    [GENL1_ID]     DECIMAL (10)    NULL,
+    [S_TABLE_ID]   VARCHAR (20)    NOT NULL,
+    [UDEF_LBL_KEY] DECIMAL (10)    NOT NULL,
+    [UDEF_TXT]     VARCHAR (30)    NULL,
+    [UDEF_ID]      VARCHAR (20)    NULL,
+    [UDEF_DT]      DATETIME        NULL,
+    [UDEF_AMT]     DECIMAL (14, 4) NULL,
+    [MODIFIED_BY]  VARCHAR (18)    NOT NULL,
+    [TIME_STAMP]   DATETIME        NOT NULL,
+    [ROWVERSION]   DECIMAL (5)     NULL,
+    [COMPANY_ID]   VARCHAR (10)    NULL
+);
+

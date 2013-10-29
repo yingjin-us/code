@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Nieva_V]
+    AUTHORIZATION [Nieva_V];
+

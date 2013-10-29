@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Moran_G]
+    AUTHORIZATION [Moran_G];
+

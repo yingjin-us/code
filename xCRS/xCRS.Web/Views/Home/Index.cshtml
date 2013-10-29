@@ -1,0 +1,99 @@
+﻿@model xCRS.Entities.Models.HRTransaction
+
+@{
+    ViewBag.Title = "Start a new transaction";
+    ViewBag.Employee = "John Doerr"; // TODO: YJ, 4/6, make employee dynamic
+}
+@section ViewSpecificScript
+{
+    <script type="text/javascript" src="/Scripts/get.js"></script>
+}
+@using (Html.BeginForm("HRTransaction", "api", FormMethod.Post))
+{
+    // HACK: YJ, 4/15/13, originally using (Html.BeginForm("HRTransaction", "api", FormMethod.Post)) but got http://localhost/HRTransactionController/Post and 404, change to current form based on http://stackoverflow.com/questions/14075903/html-beginform-in-webapi-routing 
+    <h2>What HR Transaction would you like to apply to @ViewBag.Employee?</h2>
+
+    <ul data-bind="template: {name: 'HRTransactionTypesTemplate', foreach: HRTransactionTypes}">
+    </ul>
+    
+    <ul class="pager">  
+        <li class="next">
+        <button type="submit" class="btn btn-primary">Next &rarr;</button>
+        </li>
+    </ul>
+}
+    @section scripts
+    {
+        <script id="HRTransactionTypesTemplate" type="text/html"> 
+            <label class="radio">
+                <input type="radio" name="HRTransactionTypeId" data-bind="value:id" />
+                <div data-bind="text:name"></div>
+            </label>
+                
+                
+         </script>
+
+            <script type="text/javascript">
+                viewModel = {
+                    HRTransactionTypes: ko.observableArray([])
+                };
+
+
+                ko.applyBindings(viewModel);
+            </script>
+    }
+
+@*
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.createdBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.createdOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.updatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.updatedOn)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.createdBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.createdOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.updatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.updatedOn)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
+*@

@@ -1,0 +1,3 @@
+﻿CREATE USER [Della Torre_K] WITHOUT LOGIN
+    WITH DEFAULT_SCHEMA = [Della Torre_K];
+

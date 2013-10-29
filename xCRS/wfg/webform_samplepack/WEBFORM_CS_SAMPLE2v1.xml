@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package schemaLocation="http://www.wfmc.org/2002/XPDL1.0 http://wfmc.org/standards/docs/TC-1025_schema_10_xpdl.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Id="WORKFLOWGEN" xmlns="http://www.wfmc.org/2002/XPDL1.0">
+  <PackageHeader>
+    <XPDLVersion>1.0</XPDLVersion>
+    <Vendor>WORKFLOWGEN 5.0 32</Vendor>
+    <Created>10/30/2007 4:49:56 PM</Created>
+  </PackageHeader>
+  <ConformanceClass GraphConformance="NON_BLOCKED">
+  </ConformanceClass>
+  <Script Type="text/vbscript">
+  </Script>
+  <TypeDeclarations>
+    <TypeDeclaration Id="File" Name="File">
+      <ExternalReference location="http://www.workflowgen.com/xsd/xpdl/schema-v1-0.xsd">
+      </ExternalReference>
+    </TypeDeclaration>
+  </TypeDeclarations>
+  <Participants>
+    <Participant Id="WFG_ADMINS">
+      <ParticipantType Type="ROLE">
+      </ParticipantType>
+      <Description>WorkflowGen Administrators</Description>
+    </Participant>
+  </Participants>
+  <WorkflowProcesses>
+    <WorkflowProcess AccessLevel="PUBLIC" Id="WEBFORM_CS_SAMPLE2">
+      <ProcessHeader>
+        <Created>10/30/2007 4:49:56 PM</Created>
+        <Description>An advanced mode example using WorkflowGen.My v2.0</Description>
+      </ProcessHeader>
+      <RedefinableHeader PublicationStatus="UNDER_REVISION">
+        <Author>wfgen_admin</Author>
+        <Version>1</Version>
+        <Codepage>437</Codepage>
+        <Responsibles>
+          <Responsible>WFG_ADMINS</Responsible>
+        </Responsibles>
+      </RedefinableHeader>
+      <DataFields>
+        <DataField Id="FORM_DATA" IsArray="FALSE">
+          <DataType>
+            <DeclaredType Id="File">
+            </DeclaredType>
+          </DataType>
+          <Description>The form data</Description>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Visible" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispSearch" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispList" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispHome" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="ReadOnly" Value="N">
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </DataField>
+        <DataField Id="FORM_URL" IsArray="FALSE">
+          <DataType>
+            <BasicType Type="STRING">
+            </BasicType>
+          </DataType>
+          <InitialValue><![CDATA[/wfgen/wfapps/webforms/samples/cs/sample2/default.aspx]]></InitialValue>
+          <Description>FORM_URL</Description>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Visible" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispSearch" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispList" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispHome" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="ReadOnly" Value="N">
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </DataField>
+        <DataField Id="FORM_ARCHIVE" IsArray="FALSE">
+          <DataType>
+            <DeclaredType Id="File">
+            </DeclaredType>
+          </DataType>
+          <Description>Static form</Description>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Visible" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispSearch" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispList" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispHome" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="ReadOnly" Value="N">
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </DataField>
+        <DataField Id="FILE_UPLOAD" IsArray="FALSE">
+          <DataType>
+            <DeclaredType Id="File">
+            </DeclaredType>
+          </DataType>
+          <Description>FILE_UPLOAD</Description>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Visible" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispSearch" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispList" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispHome" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="ReadOnly" Value="N">
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </DataField>
+        <DataField Id="HTML_INPUT_FILE" IsArray="FALSE">
+          <DataType>
+            <DeclaredType Id="File">
+            </DeclaredType>
+          </DataType>
+          <Description>HTML_INPUT_FILE</Description>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Visible" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispSearch" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispList" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DispHome" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="ReadOnly" Value="N">
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </DataField>
+      </DataFields>
+      <Participants>
+        <Participant Id="INITIATOR">
+          <ParticipantType Type="ROLE">
+          </ParticipantType>
+          <Description>Initiator</Description>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Role" Value="REQUESTER">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="Type" Value="ROLE">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="ViewGraphics" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="ReassignAction" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="CancelRequest" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="ViewStatistics" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="Scope" Value="PROCESS">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="MapToUsers" Value="wfgen_admin">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="MapToGroups" Value="">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="MapToDirectories" Value="">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="MapToCoordinators" Value="">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="SwimLaneWidth" Value="180">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="SwimLaneHeight" Value="97">
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </Participant>
+      </Participants>
+      <Applications>
+        <Application Id="EFORMASPX_START">
+          <Description>WebForms management</Description>
+          <FormalParameters>
+            <FormalParameter Id="CURRENT_ACTION" Index="1" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="FILE_UPLOAD" Index="2" Mode="INOUT">
+              <DataType>
+                <DeclaredType Id="File">
+                </DeclaredType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="FORM_ARCHIVE" Index="3" Mode="OUT">
+              <DataType>
+                <DeclaredType Id="File">
+                </DeclaredType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="FORM_DATA" Index="4" Mode="INOUT">
+              <DataType>
+                <DeclaredType Id="File">
+                </DeclaredType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="FORM_FIELDS_ARCHIVE_HIDDEN" Index="5" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="FORM_FIELDS_REQUIRED" Index="6" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="FORM_URL" Index="7" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="HTML_INPUT_FILE" Index="8" Mode="INOUT">
+              <DataType>
+                <DeclaredType Id="File">
+                </DeclaredType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="TEXT_BOX" Index="9" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="TEXT_BOX_DATE" Index="10" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+            <FormalParameter Id="TEXT_BOX_DATE_TIME" Index="11" Mode="IN">
+              <DataType>
+                <BasicType Type="STRING">
+                </BasicType>
+              </DataType>
+            </FormalParameter>
+          </FormalParameters>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Type" Value="WEBAPP">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="Class" Value="EFORMASPX">
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </Application>
+      </Applications>
+      <Activities>
+        <Activity Id="START">
+          <Description>START</Description>
+          <Implementation>
+            <Tool Id="EFORMASPX_START" Type="APPLICATION">
+              <ActualParameters>
+                <ActualParameter><![CDATA[<WF_ACTIVITY_NAME>]]></ActualParameter>
+                <ActualParameter>FILE_UPLOAD</ActualParameter>
+                <ActualParameter>FORM_ARCHIVE</ActualParameter>
+                <ActualParameter>FORM_DATA</ActualParameter>
+                <ActualParameter><![CDATA[SubmitButton]]></ActualParameter>
+                <ActualParameter><![CDATA[TEXT_BOX]]></ActualParameter>
+                <ActualParameter>FORM_URL</ActualParameter>
+                <ActualParameter>HTML_INPUT_FILE</ActualParameter>
+                <ActualParameter><![CDATA[This is a test]]></ActualParameter>
+                <ActualParameter><![CDATA[<WF_SYSTEM_DATE>]]></ActualParameter>
+                <ActualParameter><![CDATA[<WF_SYSTEM_DATETIME>]]></ActualParameter>
+              </ActualParameters>
+            </Tool>
+          </Implementation>
+          <Performer>INITIATOR</Performer>
+          <TransitionRestrictions>
+            <TransitionRestriction>
+              <Split Type="AND">
+                <TransitionRefs>
+                  <TransitionRef Id="6">
+                  </TransitionRef>
+                  <TransitionRef Id="7">
+                  </TransitionRef>
+                </TransitionRefs>
+              </Split>
+            </TransitionRestriction>
+          </TransitionRestrictions>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="AssignType" Value="PUSH_AUTO_REQUESTER">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="NotifyAssignTodo" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="NotifyTodo" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="NotifyDelay" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="NotifyCancelAssign" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="NotifyErrorAssign" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="Visible" Value="Y">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DurationWorkhour" Value="N">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="OverdueDuration" Value="-1">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="xPos" Value="260.1">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="yPos" Value="130.1">
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="IconSize" Value="large">
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </Activity>
+        <Activity Id="_END">
+          <Route>
+          </Route>
+          <TransitionRestrictions>
+            <TransitionRestriction>
+              <Join Type="XOR">
+              </Join>
+            </TransitionRestriction>
+          </TransitionRestrictions>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="xPos" Value="311.95" />
+            <ExtendedAttribute Name="yPos" Value="229" />
+          </ExtendedAttributes>
+        </Activity>
+      </Activities>
+      <Transitions>
+        <Transition Id="6" From="START" To="_END">
+          <Condition Type="CONDITION"><![CDATA[false]]></Condition>
+          <ExtendedAttributes>
+            <ExtendedAttribute Value="229" Name="YPosEnd" />
+            <ExtendedAttribute Value="311.95" Name="XPosEnd" />
+            <ExtendedAttribute Name="anchorFrom" Value="3" />
+            <ExtendedAttribute Name="anchorTo" Value="1" />
+            <ExtendedAttribute Value="311.95" Name="XPosEnd" />
+            <ExtendedAttribute Value="229" Name="YPosEnd" />
+          </ExtendedAttributes>
+        </Transition>
+        <Transition Id="7" From="START" To="START">
+          <Condition Type="CONDITION"><![CDATA[true]]></Condition>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="anchorFrom" Value="2" />
+            <ExtendedAttribute Name="anchorTo" Value="2" />
+          </ExtendedAttributes>
+        </Transition>
+      </Transitions>
+      <ExtendedAttributes>
+        <ExtendedAttribute Name="Categories" Value="">
+        </ExtendedAttribute>
+        <ExtendedAttribute Name="NotifyComplete" Value="Y">
+        </ExtendedAttribute>
+        <ExtendedAttribute Name="ArchiveActivityResult" Value="Y">
+        </ExtendedAttribute>
+        <ExtendedAttribute Name="DurationWorkhour" Value="N">
+        </ExtendedAttribute>
+        <ExtendedAttribute Name="Subflow" Value="N">
+        </ExtendedAttribute>
+        <ExtendedAttribute Value="315" Name="GRAPH_BEGIN_POINT_X" />
+        <ExtendedAttribute Value="76" Name="GRAPH_BEGIN_POINT_Y" />
+        <ExtendedAttribute Value="0" Name="GRAPH_SCROLL_POS_X" />
+        <ExtendedAttribute Value="0" Name="GRAPH_SCROLL_POS_Y" />
+        <ExtendedAttribute Name="GRAPH_COMMENT">
+          <Comment xmlns:WorkflowGen="http://www.workflowgen.com/xsd/xpdl/schema-v1-0.xsd" Text="Webform%202%2E0%20%2D%20Advanced%20mode" XPos="244" YPos="21" Id="0" Border="YES" />
+        </ExtendedAttribute>
+        <ExtendedAttribute Name="SwimLaneMode" Value="N" View="Vertical" />
+      </ExtendedAttributes>
+    </WorkflowProcess>
+  </WorkflowProcesses>
+</Package>

@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Lohr_S]
+    AUTHORIZATION [Lohr_S];
+

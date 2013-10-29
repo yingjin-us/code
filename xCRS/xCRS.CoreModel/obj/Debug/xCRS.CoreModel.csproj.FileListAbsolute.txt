@@ -1,0 +1,12 @@
+C:\xCRS\xCRS.CoreModel\bin\Debug\xCRS.CoreModel.dll
+C:\xCRS\xCRS.CoreModel\bin\Debug\xCRS.CoreModel.pdb
+C:\xCRS\xCRS.CoreModel\bin\Debug\xCRS.Entities.dll
+C:\xCRS\xCRS.CoreModel\bin\Debug\xCRS.Entities.pdb
+C:\xCRS\xCRS.CoreModel\obj\Debug\xCRS.CoreModel.csprojResolveAssemblyReference.cache
+C:\xCRS\xCRS.CoreModel\obj\Debug\xCRS.CoreModel.dll
+C:\xCRS\xCRS.CoreModel\obj\Debug\xCRS.CoreModel.pdb
+C:\xCRS\xCRS.CoreModel\bin\Debug\EntityFramework.dll
+C:\xCRS\xCRS.CoreModel\bin\Debug\EntityFramework.xml
+C:\xCRS\xCRS.CoreModel\bin\Debug\xCRS.CoreModel.dll.config
+C:\xCRS\xCRS.CoreModel\bin\Debug\Newtonsoft.Json.dll
+C:\xCRS\xCRS.CoreModel\bin\Debug\Newtonsoft.Json.xml

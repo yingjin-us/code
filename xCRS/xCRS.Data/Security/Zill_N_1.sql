@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Zill_N]
+    AUTHORIZATION [Zill_N];
+

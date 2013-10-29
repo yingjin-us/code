@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [MacAllum_K]
+    AUTHORIZATION [MacAllum_K];
+

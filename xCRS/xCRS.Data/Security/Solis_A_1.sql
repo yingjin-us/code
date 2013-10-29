@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Solis_A]
+    AUTHORIZATION [Solis_A];
+

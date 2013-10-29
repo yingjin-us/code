@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Gray_L]
+    AUTHORIZATION [Gray_L];
+

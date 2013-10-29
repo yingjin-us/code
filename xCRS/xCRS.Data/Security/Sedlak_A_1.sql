@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Sedlak_A]
+    AUTHORIZATION [Sedlak_A];
+

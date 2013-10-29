@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Heid_C]
+    AUTHORIZATION [Heid_C];
+

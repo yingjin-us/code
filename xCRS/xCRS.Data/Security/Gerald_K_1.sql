@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Gerald_K]
+    AUTHORIZATION [Gerald_K];
+

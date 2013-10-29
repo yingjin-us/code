@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Maklan_D]
+    AUTHORIZATION [Maklan_D];
+

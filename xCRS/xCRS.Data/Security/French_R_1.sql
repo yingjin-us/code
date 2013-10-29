@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [French_R]
+    AUTHORIZATION [French_R];
+

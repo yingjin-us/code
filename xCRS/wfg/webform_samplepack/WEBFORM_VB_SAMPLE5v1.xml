@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Package xmlns="http://www.wfmc.org/2002/XPDL1.0" xsi:schemaLocation="http://www.wfmc.org/2002/XPDL1.0 http://wfmc.org/standards/docs/TC-1025_schema_10_xpdl.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Id="WORKFLOWGEN">
+	<PackageHeader>
+		<XPDLVersion>1.0</XPDLVersion>
+		<Vendor>WORKFLOWGEN 4.2 4</Vendor>
+		<Created>1/30/2007 10:33 am</Created>
+	</PackageHeader>
+	<ConformanceClass GraphConformance="NON_BLOCKED"/>
+	<Script Type="text/vbscript"/>
+	<TypeDeclarations>
+		<TypeDeclaration Id="File" Name="File">
+			<ExternalReference location="http://www.workflowgen.com/xsd/xpdl/schema-v1-0.xsd"/>
+		</TypeDeclaration>
+	</TypeDeclarations>
+	<Participants>
+		<Participant Id="MGR">
+			<ParticipantType Type="ROLE"/>
+			<Description>Manager</Description>
+		</Participant>
+	</Participants>
+	<WorkflowProcesses>
+		<WorkflowProcess AccessLevel="PUBLIC" Id="WEBFORM_VB_SAMPLE5">
+			<ProcessHeader>
+				<Created>1/30/2007 10:33:29 AM</Created>
+				<Description>A simple mode example using WorkflowGen.My v2.0 and AJAX (Atlas) enabled pages</Description>
+			</ProcessHeader>
+			<RedefinableHeader PublicationStatus="UNDER_TEST">
+				<Author>wfgen_admin</Author>
+				<Version>1</Version>
+				<Codepage/>
+				<Responsibles>
+					<Responsible>MGR</Responsible>
+				</Responsibles>
+			</RedefinableHeader>
+			<DataFields>
+				<DataField Id="FORM_DATA" IsArray="FALSE">
+					<DataType>
+						<DeclaredType Id="File"/>
+					</DataType>
+					<InitialValue>empty_formdata.xml</InitialValue>
+					<Description>FORM_DATA</Description>
+					<ExtendedAttributes>
+						<ExtendedAttribute Name="Visible" Value="Y"/>
+						<ExtendedAttribute Name="DispSearch" Value="N"/>
+						<ExtendedAttribute Name="DispList" Value="N"/>
+						<ExtendedAttribute Name="DispHome" Value="N"/>
+						<ExtendedAttribute Name="ReadOnly" Value="N"/>
+						<ExtendedAttribute Name="File">
+							<File xmlns:WorkflowGen="http://www.workflowgen.com/xsd/xpdl/schema-v1-0.xsd" FileName="empty_formdata.xml" Description="" Size="39" ContentType="text/xml" Location="F:\My documents\Advantys\empty_formdata.xml" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">PE5ld0RhdGFTZXQ+DQoJPFRhYmxlMS8+DQo8L05ld0RhdGFTZXQ+</File>
+						</ExtendedAttribute>
+					</ExtendedAttributes>
+				</DataField>
+				<DataField Id="FORM_URL" IsArray="FALSE">
+					<DataType>
+						<BasicType Type="STRING"/>
+					</DataType>
+					<InitialValue>/wfgen/wfapps/webforms/samples/vb/sample5/default.aspx</InitialValue>
+					<Description>FORM_URL</Description>
+					<ExtendedAttributes>
+						<ExtendedAttribute Name="Visible" Value="Y"/>
+						<ExtendedAttribute Name="DispSearch" Value="N"/>
+						<ExtendedAttribute Name="DispList" Value="N"/>
+						<ExtendedAttribute Name="DispHome" Value="N"/>
+						<ExtendedAttribute Name="ReadOnly" Value="N"/>
+					</ExtendedAttributes>
+				</DataField>
+				<DataField Id="FORM_ARCHIVE" IsArray="FALSE">
+					<DataType>
+						<DeclaredType Id="File"/>
+					</DataType>
+					<Description>FORM_ARCHIVE</Description>
+					<ExtendedAttributes>
+						<ExtendedAttribute Name="Visible" Value="Y"/>
+						<ExtendedAttribute Name="DispSearch" Value="N"/>
+						<ExtendedAttribute Name="DispList" Value="N"/>
+						<ExtendedAttribute Name="DispHome" Value="N"/>
+						<ExtendedAttribute Name="ReadOnly" Value="N"/>
+					</ExtendedAttributes>
+				</DataField>
+				<DataField Id="SAVE_AS_DRAFT" IsArray="FALSE">
+					<DataType>
+						<BasicType Type="STRING"/>
+					</DataType>
+					<Description>SAVE_AS_DRAFT</Description>
+					<ExtendedAttributes>
+						<ExtendedAttribute Name="Visible" Value="Y"/>
+						<ExtendedAttribute Name="DispSearch" Value="N"/>
+						<ExtendedAttribute Name="DispList" Value="N"/>
+						<ExtendedAttribute Name="DispHome" Value="N"/>
+						<ExtendedAttribute Name="ReadOnly" Value="N"/>
+					</ExtendedAttributes>
+				</DataField>
+			</DataFields>
+			<Participants>
+				<Participant Id="ADVANTYS">
+					<ParticipantType Type="ROLE"/>
+					<Description>ADVANTYS</Description>
+					<ExtendedAttributes>
+						<ExtendedAttribute Name="Role" Value="REQUESTER"/>
+						<ExtendedAttribute Name="Type" Value="ROLE"/>
+						<ExtendedAttribute Name="ViewGraphics" Value="Y"/>
+						<ExtendedAttribute Name="ReassignAction" Value="N"/>
+						<ExtendedAttribute Name="CancelRequest" Value="N"/>
+						<ExtendedAttribute Name="ViewStatistics" Value="N"/>
+						<ExtendedAttribute Name="Scope" Value="GLOBAL"/>
+						<ExtendedAttribute Name="MapToUsers" Value="wfgen_admin"/>
+						<ExtendedAttribute Name="MapToGroups" Value=""/>
+						<ExtendedAttribute Name="MapToDirectories" Value=""/>
+						<ExtendedAttribute Name="MapToCoordinators" Value=""/>
+					</ExtendedAttributes>
+				</Participant>
+			</Participants>
+			<Applications>
+				<Application Id="EFORMASPX_ACTION_1">
+					<Description>WebForms management</Description>
+					<FormalParameters>
+						<FormalParameter Id="FORM_ARCHIVE" Index="1" Mode="OUT">
+							<DataType>
+								<DeclaredType Id="File"/>
+							</DataType>
+						</FormalParameter>
+						<FormalParameter Id="FORM_DATA" Index="2" Mode="INOUT">
+							<DataType>
+								<DeclaredType Id="File"/>
+							</DataType>
+						</FormalParameter>
+						<FormalParameter Id="FORM_FIELDS_REQUIRED" Index="3" Mode="IN">
+							<DataType>
+								<BasicType Type="STRING"/>
+							</DataType>
+						</FormalParameter>
+						<FormalParameter Id="FORM_URL" Index="4" Mode="IN">
+							<DataType>
+								<BasicType Type="STRING"/>
+							</DataType>
+						</FormalParameter>
+						<FormalParameter Id="SAVE_AS_DRAFT" Index="5" Mode="OUT">
+							<DataType>
+								<BasicType Type="STRING"/>
+							</DataType>
+						</FormalParameter>
+					</FormalParameters>
+					<ExtendedAttributes>
+						<ExtendedAttribute Name="Type" Value="WEBAPP"/>
+						<ExtendedAttribute Name="Class" Value="EFORMASPX"/>
+					</ExtendedAttributes>
+				</Application>
+			</Applications>
+			<Activities>
+				<Activity Id="ACTION_1">
+					<Description>ACTION_1</Description>
+					<Implementation>
+						<Tool Id="EFORMASPX_ACTION_1" Type="APPLICATION">
+							<ActualParameters>
+								<ActualParameter>FORM_ARCHIVE</ActualParameter>
+								<ActualParameter>FORM_DATA</ActualParameter>
+								<ActualParameter>EMPLOYEE_LIST, EMPLOYEE_LIST.FIRST_NAME, EMPLOYEE_LIST.LAST_NAME</ActualParameter>
+								<ActualParameter>FORM_URL</ActualParameter>
+								<ActualParameter>SAVE_AS_DRAFT</ActualParameter>
+							</ActualParameters>
+						</Tool>
+					</Implementation>
+					<Performer>ADVANTYS</Performer>
+					<TransitionRestrictions>
+						<TransitionRestriction>
+							<Split Type="XOR">
+								<TransitionRefs>
+									<TransitionRef Id="1"/>
+									<TransitionRef Id="2"/>
+								</TransitionRefs>
+							</Split>
+						</TransitionRestriction>
+					</TransitionRestrictions>
+					<ExtendedAttributes>
+						<ExtendedAttribute Name="AssignType" Value="PUSH_AUTO_REQUESTER"/>
+						<ExtendedAttribute Name="NotifyAssignTodo" Value="Y"/>
+						<ExtendedAttribute Name="NotifyTodo" Value="Y"/>
+						<ExtendedAttribute Name="NotifyDelay" Value="Y"/>
+						<ExtendedAttribute Name="NotifyCancelAssign" Value="Y"/>
+						<ExtendedAttribute Name="NotifyErrorAssign" Value="Y"/>
+						<ExtendedAttribute Name="Visible" Value="Y"/>
+						<ExtendedAttribute Name="DurationWorkhour" Value="N"/>
+						<ExtendedAttribute Name="xPos" Value="375.1"/>
+						<ExtendedAttribute Name="yPos" Value="139.1"/>
+					</ExtendedAttributes>
+				</Activity>
+				<Activity Id="_END">
+					<Route/>
+					<TransitionRestrictions>
+						<TransitionRestriction>
+							<Join Type="XOR"/>
+						</TransitionRestriction>
+					</TransitionRestrictions>
+					<ExtendedAttributes>
+						<ExtendedAttribute Name="xPos" Value="424.95"/>
+						<ExtendedAttribute Name="yPos" Value="291"/>
+					</ExtendedAttributes>
+				</Activity>
+			</Activities>
+			<Transitions>
+				<Transition Id="1" From="ACTION_1" To="_END">
+					<Condition Type="OTHERWISE"/>
+					<ExtendedAttributes>
+						<ExtendedAttribute Value="291" Name="YPosEnd"/>
+						<ExtendedAttribute Value="424.95" Name="XPosEnd"/>
+						<ExtendedAttribute Name="anchorFrom" Value="3"/>
+						<ExtendedAttribute Name="anchorTo" Value="1"/>
+					</ExtendedAttributes>
+				</Transition>
+				<Transition Id="2" From="ACTION_1" To="ACTION_1">
+					<Condition Type="CONDITION">&lt;SAVE_AS_DRAFT&gt;="True"</Condition>
+					<ExtendedAttributes>
+						<ExtendedAttribute Name="anchorFrom" Value="2"/>
+						<ExtendedAttribute Name="anchorTo" Value="2"/>
+					</ExtendedAttributes>
+				</Transition>
+			</Transitions>
+			<ExtendedAttributes>
+				<ExtendedAttribute Name="Categories" Value=""/>
+				<ExtendedAttribute Name="NotifyComplete" Value="Y"/>
+				<ExtendedAttribute Name="ArchiveActivityResult" Value="N"/>
+				<ExtendedAttribute Name="DurationWorkhour" Value="N"/>
+				<ExtendedAttribute Name="Subflow" Value="N"/>
+				<ExtendedAttribute Value="431" Name="GRAPH_BEGIN_POINT_X"/>
+				<ExtendedAttribute Value="49" Name="GRAPH_BEGIN_POINT_Y"/>
+				<ExtendedAttribute Value="0" Name="GRAPH_SCROLL_POS_X"/>
+				<ExtendedAttribute Value="0" Name="GRAPH_SCROLL_POS_Y"/>
+				<ExtendedAttribute Name="GRAPH_COMMENT">
+					<Comment xmlns:WorkflowGen="http://www.workflowgen.com/xsd/xpdl/schema-v1-0.xsd" Text="WebForms%202%2E0%20%2D%20AJAX%20Atlas%20example" XPos="338" YPos="12" Id="1" Border="YES"/>
+				</ExtendedAttribute>
+			</ExtendedAttributes>
+		</WorkflowProcess>
+	</WorkflowProcesses>
+</Package>

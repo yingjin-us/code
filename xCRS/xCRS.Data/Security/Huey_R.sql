@@ -1,0 +1,3 @@
+﻿CREATE USER [Huey_R] FOR LOGIN [Huey_R]
+    WITH DEFAULT_SCHEMA = [Huey_R];
+

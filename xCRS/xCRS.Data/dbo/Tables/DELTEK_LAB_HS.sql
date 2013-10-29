@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[DELTEK_LAB_HS] (
+    [LAB_HS_KEY]        NUMERIC (10)    NOT NULL,
+    [PROJ_ID]           VARCHAR (30)    NULL,
+    [ORG_ID]            VARCHAR (20)    NOT NULL,
+    [ACCT_ID]           VARCHAR (15)    NOT NULL,
+    [FY_CD]             VARCHAR (6)     NOT NULL,
+    [PD_NO]             NUMERIC (5)     NOT NULL,
+    [SUB_PD_NO]         NUMERIC (5)     NOT NULL,
+    [BILL_LAB_CAT_CD]   VARCHAR (6)     NULL,
+    [ACT_HRS]           NUMERIC (14, 2) NOT NULL,
+    [ALLOW_REV_HRS]     NUMERIC (14, 2) NOT NULL,
+    [REV_RT_AMT]        NUMERIC (10, 4) NOT NULL,
+    [GENL_LAB_CAT_CD]   VARCHAR (6)     NOT NULL,
+    [MODIFIED_BY]       VARCHAR (20)    NOT NULL,
+    [TIME_STAMP]        DATETIME        NOT NULL,
+    [ACT_AMT]           NUMERIC (14, 2) NOT NULL,
+    [ROWVERSION]        NUMERIC (10)    NULL,
+    [EMPL_ID]           VARCHAR (12)    NULL,
+    [VEND_ID]           VARCHAR (12)    NULL,
+    [RECALC_REV_FL]     VARCHAR (1)     NULL,
+    [VEND_EMPL_ID]      VARCHAR (12)    NULL,
+    [S_BILL_RT_TYPE_CD] VARCHAR (1)     NULL,
+    [CUR_MULT_RT]       NUMERIC (14, 4) NULL,
+    [YTD_MULT_RT]       NUMERIC (14, 4) NULL,
+    [EFFECT_BILL_DT]    DATETIME        NOT NULL,
+    [COMPANY_ID]        VARCHAR (10)    NOT NULL
+);
+

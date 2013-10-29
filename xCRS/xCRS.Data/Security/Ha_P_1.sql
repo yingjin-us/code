@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Ha_P]
+    AUTHORIZATION [Ha_P];
+

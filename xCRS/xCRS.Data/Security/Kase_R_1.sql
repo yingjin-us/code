@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Kase_R]
+    AUTHORIZATION [Kase_R];
+
