@@ -17,7 +17,7 @@
     // extend the app with this dataservice
     app.dataservice = dataservice;
 
-    // gets all Persons asynchronously
+    // gets all Proposals asynchronously
     // returning a promise you can wait for     
     function getAllProposals(proposalArray) {
         log("querying for all proposals");

@@ -1,3 +1,31 @@
-﻿<div id="add_image" style="position:absolute; width:100%; height:100%; background-image:url(/Images/Background.png);background-repeat:no-repeat;background-size:100%" >
+﻿@{  
+   ViewBag.Title = "Index";  
+ }  
+ <!DOCTYPE html>  
+ <html>  
+ <body>  
+   <div id="body">  
+     <div id="imageWrapper" align="center">  
+       <img id="loader" src="~/Images/ajax-loader.gif" data-bind="visible: hide()" />  
+     </div>  
+     <div id="gridWrapper" >  
+       <div id="sandBox" style="height: 200px;" data-bind="koGrid: { data:proposal ,  
+          columnDefs: [{ field: 'WPN', width: 100 },  
+                    { field: 'LastRoundNumber', width: 110 }, 
+                   { field: 'RFP_Number', width: 100 },  
+                   { field: 'ProposalStatusCode', width: 100 },
+                   { field: 'CreateDate', width: 100 },
+                   { field: 'LastUpdate', width: 100 },
+                   { field: 'UpdatedBy', width: 100 }
+         ],  
+              autogenerateColumns: false,  
+              isMultiSelect: true,
+              enablePaging: false }">  
 
-</div>
+       </div>  
+     </div>  
+   </div>  
+@Scripts.Render("~/bundles/app")
+
+ </body>  
+ </html>  

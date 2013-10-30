@@ -25,8 +25,8 @@ namespace MvcWMS
            "~/Scripts/knockout-{version}.debug.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/koGrid").Include(
-                        "~/Scripts/koGridt-{version}.js",
-                        "~/Scripts/koGrid-{version}.debug.js"));
+                        "~/Scripts/koGrid.js",
+                        "~/Scripts/koGrid.debug.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                         "~/Scripts/bootstrap.min.js",

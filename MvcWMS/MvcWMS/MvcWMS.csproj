@@ -265,6 +265,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>WMS.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="Images\ajax-loader.gif" />
     <Content Include="Models\WMS.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>WMS.edmx</DependentUpon>
@@ -302,11 +303,11 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\knockout-2.1.0.debug.js" />
-    <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\App\Logger.js" />
-    <Content Include="Scripts\koGrid-2.1.1.debug.js" />
-    <Content Include="Scripts\koGrid-2.1.1.js" />
+    <Content Include="Scripts\knockout-3.0.0.debug.js" />
+    <Content Include="Scripts\knockout-3.0.0.js" />
+    <Content Include="Scripts\koGrid.js" />
+    <Content Include="Scripts\koGrid.debug.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\notifier.js" />
     <Content Include="Scripts\q.js" />
@@ -335,10 +336,12 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Proposal\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Notifier.cshtml" />
+    <Content Include="Views\Proposal\test.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
