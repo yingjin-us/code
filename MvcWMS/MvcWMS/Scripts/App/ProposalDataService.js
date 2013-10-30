@@ -22,7 +22,7 @@
     function getAllProposals(proposalArray) {
         log("querying for all proposals");
         var query = new breeze.EntityQuery()
-                .from("GetProposals");
+                .from("GetProposals?$top=100");
 
         return manager
            .executeQuery(query)

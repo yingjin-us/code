@@ -68,7 +68,11 @@ namespace MvcWMS
                         "~/Content/themes/base/jquery.ui.tabs.css",
                         "~/Content/themes/base/jquery.ui.datepicker.css",
                         "~/Content/themes/base/jquery.ui.progressbar.css",
-                        "~/Content/themes/base/jquery.ui.theme.css"));
+                        "~/Content/themes/base/jquery.ui.theme.css",
+                        "~/Content/bootstrap/bootstrap-theme.css",
+                        "~/Content/bootstrap/bootstrap-theme.min.css",
+                        "~/Content/bootstrap/bootstrap.css",
+                        "~/Content/bootstrap/bootstrap.min.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/q").Include(
             "~/Scripts/q.js",
