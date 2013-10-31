@@ -20,18 +20,6 @@ namespace MvcWMS
 
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
-           "~/Scripts/knockout-{version}.js",
-           "~/Scripts/knockout-{version}.debug.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/koGrid").Include(
-                        "~/Scripts/koGrid.js",
-                        "~/Scripts/koGrid.debug.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                        "~/Scripts/bootstrap.min.js",
-                        "~/Scripts/bootstrap-collapse.js",
-                        "~/Scripts/notifier.js"));
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
@@ -41,6 +29,36 @@ namespace MvcWMS
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.unobtrusive*",
                         "~/Scripts/jquery.validate*"));
+
+            bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
+                           "~/Scripts/knockout-{version}.js",
+                           "~/Scripts/knockout-{version}.debug.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/koGrid").Include(
+                        "~/Scripts/koGrid.js",
+                        "~/Scripts/koGrid.debug.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                        "~/Scripts/bootstrap.min.js",
+                        "~/Scripts/bootstrap-collapse.js",
+                        "~/Scripts/notifier.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/q").Include(
+                        "~/Scripts/q.js",
+                        "~/Scripts/q.min.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/breeze").Include(
+                        "~/Scripts/breeze.js",
+                        "~/Scripts/breeze.debug.js",
+                        "~/Scripts/breeze.intellisense.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/logger").Include(
+            "~/Scripts/App/Logger.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/app").Include(
+                        "~/Scripts/App/ProposalDataService.js",
+                        "~/Scripts/App/ProposalViewModel.js",
+                        "~/Scripts/App/main.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
@@ -52,7 +70,11 @@ namespace MvcWMS
                        "~/Content/KoGrid.css",
                        "~/Content/ie.css",
                        "~/Content/print.css",
-                       "~/Content/screen.css"
+                       "~/Content/screen.css",
+                       "~/Content/bootstrap-theme.css",
+                       "~/Content/bootstrap-theme.min.css",
+                       "~/Content/bootstrap.css",
+                       "~/Content/bootstrap.min.css"
                        ));
 
 
@@ -68,28 +90,11 @@ namespace MvcWMS
                         "~/Content/themes/base/jquery.ui.tabs.css",
                         "~/Content/themes/base/jquery.ui.datepicker.css",
                         "~/Content/themes/base/jquery.ui.progressbar.css",
-                        "~/Content/themes/base/jquery.ui.theme.css",
-                        "~/Content/bootstrap/bootstrap-theme.css",
-                        "~/Content/bootstrap/bootstrap-theme.min.css",
-                        "~/Content/bootstrap/bootstrap.css",
-                        "~/Content/bootstrap/bootstrap.min.css"));
+                        "~/Content/themes/base/jquery.ui.theme.css"));
 
-            bundles.Add(new ScriptBundle("~/bundles/q").Include(
-            "~/Scripts/q.js",
-            "~/Scripts/q.min.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/breeze").Include(
-                        "~/Scripts/breeze.js",
-                        "~/Scripts/breeze.debug.js",
-                        "~/Scripts/breeze.intellisense.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/logger").Include(
-            "~/Scripts/App/Logger.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/app").Include(
-                        "~/Scripts/App/ProposalDataService.js",
-                        "~/Scripts/App/ProposalViewModel.js",
-                        "~/Scripts/App/main.js"));
 
         }
     }
