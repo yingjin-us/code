@@ -170,7 +170,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Contracts\IBreezeProposalRepository.cs" />
+    <Compile Include="Models\Contracts\IBreezeProposalRoundRepository.cs" />
     <Compile Include="Models\Implementations\BreezeProposalRepository.cs" />
+    <Compile Include="Models\Implementations\BreezeProposalRoundRepository.cs" />
     <Compile Include="Models\Proposal.cs">
       <DependentUpon>WMS.tt</DependentUpon>
     </Compile>

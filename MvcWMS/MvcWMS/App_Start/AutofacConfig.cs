@@ -19,6 +19,7 @@ namespace MvcWMS.App_Start
             builder.RegisterControllers(typeof(WebApiApplication).Assembly);
             builder.RegisterApiControllers(typeof(WebApiApplication).Assembly);
             builder.RegisterType<BreezeProposalRepository>().AsImplementedInterfaces().InstancePerApiRequest().InstancePerHttpRequest();
+            builder.RegisterType<BreezeProposalRoundRepository>().AsImplementedInterfaces().InstancePerApiRequest().InstancePerHttpRequest();
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
             GlobalConfiguration.Configuration.DependencyResolver = new AutofacWebApiDependencyResolver(container);
