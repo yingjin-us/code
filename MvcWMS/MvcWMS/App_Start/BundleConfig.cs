@@ -39,8 +39,8 @@ namespace MvcWMS
                         "~/Scripts/koGrid.debug.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                        "~/Scripts/bootstrap.js",
                         "~/Scripts/bootstrap.min.js",
-                        "~/Scripts/bootstrap-collapse.js",
                         "~/Scripts/notifier.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/q").Include(
@@ -59,6 +59,8 @@ namespace MvcWMS
                         "~/Scripts/App/ProposalDataService.js",
                         "~/Scripts/App/ProposalViewModel.js",
                         "~/Scripts/App/main.js"));
+            bundles.Add(new ScriptBundle("~/bundles/ProposalRound").Include(
+           "~/Scripts/App/ProposalRoundViewModel.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.

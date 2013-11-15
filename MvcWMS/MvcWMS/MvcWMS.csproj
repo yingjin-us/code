@@ -166,6 +166,7 @@
     <Compile Include="Controllers\BreezeProposalRoundController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProposalController.cs" />
+    <Compile Include="Controllers\ProposalRoundController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -292,6 +293,7 @@
     <None Include="Scripts\breeze.intellisense.js" />
     <Content Include="Scripts\App\main.js" />
     <Content Include="Scripts\App\ProposalDataService.js" />
+    <Content Include="Scripts\App\ProposalRoundViewModel.js" />
     <Content Include="Scripts\App\ProposalViewModel.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -351,6 +353,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Notifier.cshtml" />
     <Content Include="Views\Proposal\test.cshtml" />
+    <Content Include="Views\ProposalRound\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -373,9 +376,9 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>62543</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:52701/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

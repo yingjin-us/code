@@ -6,10 +6,10 @@
  <body>  
    <div id="body">  
      <div id="imageWrapper" align="center">  
-       <img id="loader" src="images/ajax.gif" data-bind="visible: hide()" />  
+       <img id="loader" src="~/Images/ajax-loader.gif" data-bind="visible: hide()" />  
      </div>  
-     <div id="gridWrapper" data-bind="visible: !hide()">  
-       <div id="sandBox" style="height: 200px;" data-bind="koGrid: { data: proposal,  
+     <div id="gridWrapper" >  
+       <div id="sandBox" style="height: 2000px;" data-bind="koGrid: { data:proposal ,  
           columnDefs: [{ field: 'WPN', width: 100 },  
                     { field: 'LastRoundNumber', width: 110 }, 
                    { field: 'RFP_Number', width: 100 },  
@@ -20,7 +20,8 @@
          ],  
               autogenerateColumns: false,  
               isMultiSelect: true,
-              enablePaging: true }">  
+              enablePaging: false }">  
+
        </div>  
      </div>  
    </div>  
