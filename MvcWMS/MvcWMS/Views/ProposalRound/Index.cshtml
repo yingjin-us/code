@@ -8,7 +8,7 @@
    <table id="proposalRound" class="table table-striped table-hover table-condensed">  
      <thead>  
        <tr>  
-         <th>VPN</th>  
+         <th>WPN</th>  
          <th>Round Number</th>  
          <th>Contractor Type Code</th>  
          <th>PM Code</th>  
@@ -38,10 +38,130 @@
        </tr>  
      </thead>  
      <tbody id="prList" data-bind="foreach: ProposalRounds">  
-       <tr>  
-         <td>           
-           <span style="color: darkgrey; font-size: 10pt; font-weight: bold" data-bind="text : WPN"></span>  
-         </td>  
+ 
+       <tr> 
+        <td class='value editable'>  
+           <div class="editor modal">  
+             <div class="modal-header">  
+               <h3>Edit Proposal Round</h3>  
+             </div>  
+             <div class="row offset1">  
+               <p>  
+                 <label>WPN</label>  
+                 <input type="text" data-bind="value :WPN" />  
+               </p>  
+               <p>  
+                 <label>Round Number</label>  
+                 <input type="text" data-bind="value :RoundNumber" />  
+               </p>  
+               <p>  
+                 <label>Contract Type Code</label>  
+                 <input type="text" data-bind="value :ContractTypeCode"></input>                  
+               </p>  
+               <p>  
+                 <label>PMCode</label>  
+                 <input type="text" data-bind="value :PMCode"></input>                  
+               </p>  
+               <p>  
+                 <label>PECode</label>  
+                 <input type="text" data-bind="value :PECode"></input>                  
+               </p>  
+               <p>  
+                 <label>PSCode</label>  
+                 <input type="text" data-bind="value :PSCode"></input>                  
+               </p>  
+               <p>  
+                 <label>Is Westat Prime</label>  
+                 <input type="text" data-bind="value :IsWestatPrime"></input>                  
+               </p>  
+               <p>  
+                 <label>WestatSubTo</label>  
+                 <input type="text" data-bind="value :WestatSubTo"></input>                  
+               </p>  
+               <p>  
+                 <label>Subcontractors</label>  
+                 <input type="text" data-bind="value :Subcontractors"></input>                  
+               </p>                
+                <p>  
+                 <label>Consultants</label>  
+                 <input type="text" data-bind="value :Consultants"></input>                  
+               </p>                
+                <p>  
+                 <label>Vendors</label>  
+                 <input type="text" data-bind="value :Vendors"></input>                  
+               </p>                
+                <p>  
+                 <label>RoundTypeCode</label>  
+                 <input type="text" data-bind="value :RoundTypeCode"></input>                  
+               </p>                
+                <p>  
+                 <label>DueDate</label>  
+                 <input type="text" data-bind="value :DueDate"></input>                  
+               </p>                
+                <p>  
+                 <label>PrimaryDeliveryModeCode</label>  
+                 <input type="text" data-bind="value :PrimaryDeliveryModeCode"></input>                  
+               </p>
+                <p>  
+                 <label>DeliveryConfirmedDate</label>  
+                 <input type="text" data-bind="value :DeliveryConfirmedDate"></input>                  
+               </p> 
+                 <p>  
+                 <label>DuePlace</label>  
+                 <input type="text" data-bind="value :DuePlace"></input>                  
+               </p>
+                <p>  
+                 <label>SDBPartPlanRequired</label>  
+                 <input type="text" data-bind="value :SDBPartPlanRequired"></input>                  
+               </p>
+                <!--p>  
+                 <label>SBSubcontractPlanRequired</label>       
+                 <input type="text" data-bind="value :SBSubcontractPlanRequired"></input>                  
+               </p!-->
+                <p>  
+                 <label>NAICS_SIC_Code</label>  
+                 <input type="text" data-bind="value :NAICS_SIC_Code"></input>                  
+               </p>
+                <p>  
+                 <label>BidAmount</label>  
+                 <input type="text" data-bind="value :BidAmount"></input>                  
+               </p>
+                <p>  
+                 <label>BidFeePercent</label>  
+                 <input type="text" data-bind="value :BidFeePercent"></input>                  
+               </p>
+                <p>  
+                 <label>RateDiscount</label>  
+                 <input type="text" data-bind="value :RateDiscount"></input>                  
+               </p>
+                <p>  
+                 <label>SBPercentOfContract</label>  
+                 <input type="text" data-bind="value :SBPercentOfContract"></input>                  
+               </p>
+                <p>  
+                 <label>SBPercentOfOutsourcing</label>  
+                 <input type="text" data-bind="value :SBPercentOfOutsourcing"></input>                  
+               </p>
+                <p>  
+                 <label>ExpectedContractStartDate</label>  
+                 <input type="text" data-bind="value :ExpectedContractStartDate"></input>                  
+               </p>
+                <p>  
+                 <label>ExpectedContractEndDate</label>  
+                 <input type="text" data-bind="value :ExpectedContractEndDate"></input>                  
+               </p>
+                <p>  
+                 <label>RoundStatusCode</label>  
+                 <input type="text" data-bind="value :RoundStatusCode"></input>                  
+               </p>
+             </div>  
+             <div class="modal-footer">  
+               <a href="#" data-dismiss="modal" class="btn proposalRoundCancel">Cancel</a>  
+               <a href="#" data-dismiss="modal" class="btn btn-primary proposalRoundSaver">Save</a>  
+             </div>  
+           </div>  
+           <span style="color: darkgrey; font-size: 10pt; font-weight: bold" data-bind="text : WPN"></span>
+         </td>   
          <td>  
            <span style="color: darkgrey; font-size: 10pt; font-weight: bold" data-bind="text : RoundNumber"></span>  
          </td>          
@@ -88,10 +208,12 @@
            <span style="color: darkgrey; font-size: 10pt; font-weight: bold" data-bind="text : DuePlace"></span>  
          </td>    
            <td>  
-           <span style="color: darkgrey; font-size: 10pt; font-weight: bold" data-bind="bool : SDBPartPlanRequired"></span>  
+           <span style="color: darkgrey; font-size: 10pt; font-weight: bold" data-bind="text : SDBPartPlanRequired"></span>  
          </td>    
-           <td>  
+           <td>
+    
            <span style="color: darkgrey; font-size: 10pt; font-weight: bold" data-bind="bool : SBSubcontractPlanRequired"></span>  
+
          </td>    
            <td>  
            <span style="color: darkgrey; font-size: 10pt; font-weight: bold" data-bind="text : NAICS_SIC_Code"></span>  
@@ -125,9 +247,56 @@
              Delete  
            </button>  
          </td>  
-       </tr>  
+       </tr> 
+<!-- /ko --> 
      </tbody>  
-   </table>    
-   @Scripts.Render("~/bundles/ProposalRound")  
+   </table>
+    <div class="pull-right">  
+     <a id="new-proposalRound" class="btn btn-success"  
+       data-toggle="modal" href="#proposalRound-modal">Add ProposalRound</a>  
+    </div>  
+   <div class="modal fade" id="proposalRound-modal" style="display: none; ">  
+     <div class="modal-header">  
+       <button type="button" class="close"  
+         data-dismiss="modal">  
+         ×</button>  
+       <h3>Proposal Round</h3> 
+     </div>
+     <div class="modal-body"> 
+       <div class="row offset1">  
+         <p>  
+           <label>WPN</label>  
+           <input type="text" data-bind="value :newProposalRound().WPN" />  
+         </p>  
+         <p>  
+           <label>Round Number</label>  
+           <input type="text" data-bind="value :newProposalRound().RoundNumber" />  
+         </p>  
+         <p>  
+           <label>Contractor Type Code</label>  
+           <input type="text" data-bind="value :newProposalRound().ContractTypeCode"></input>  
+         </p> 
+         <p>  
+           <label>PM Code</label>  
+           <input type="text" data-bind="value :newProposalRound().PMCode"></input>  
+         </p>           
+        <p>  
+           <label>PE Code</label>  
+           <input type="text" data-bind="value :newProposalRound().PECode"></input>  
+         </p> 
+        <p>  
+           <label>PS Code</label>  
+           <input type="text" data-bind="value :newProposalRound().PSCode"></input>  
+         </p>   
+       </div>
+    </div>  
+       <div class="modal-footer">          
+         <a href="#" data-dismiss="modal" class="btn btn-primary proposalRoundAdd">Save</a>  
+         <a href="#" data-dismiss="modal" class="btn">Cancel</a>  
+       </div>  
+       
+   </div>      
+   @Scripts.Render("~/bundles/ProposalRound")
+
  </body>  
  </html>  

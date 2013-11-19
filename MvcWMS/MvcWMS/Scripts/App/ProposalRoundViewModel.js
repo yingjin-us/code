@@ -17,9 +17,50 @@
     // define the viewmodel  
     var vm = {
         ProposalRounds: ko.observableArray(),
-        save: saveChanges
+        save: saveChanges,
+        editProposalRound: editProposalRound,
+        deleteProposalRound: deleteProposalRound,
+        newProposalRound: ko.observable(
+        {  
+            WPN: "",  
+            RoundNumber: "",  
+            ContractTypeCode: "",
+            PMCode: "",
+            PECode: "",
+            PSCode:""
+        }),  
+        addProposalRound: addNewProposalRound
+    };
+    function addNewProposalRound() {
+        log("call createProposalRound");
+        var item = createProposalRound({
+            WPN: vm.newProposalRound().WPN,
+            RoundNumber: vm.newProposalRound().RoundNumber,
+            ContractTypeCode: vm.newProposalRound().ContractTypeCode,
+            PMCode: vm.newProposalRound().PMCode,
+            PECode: vm.newProposalRound().PECode,
+            PSCode: vm.newProposalRound().PSCode
+        });
+        log("Proposal round entity created");
+        vm.ProposalRounds.push(item);
+        vm.save();
     };
 
+    function createProposalRound(newProposalRound) {
+        log("Create entity of proposal round ");
+        return manager.createEntity('ProposalRound', newProposalRound);
+    };
+
+    function editProposalRound(proposalRound) {
+        proposalRound.entityAspect.setModified();
+        vm.save();
+    };
+
+    function deleteProposalRound(proposalRound) {
+        proposalRound.entityAspect.setDeleted();
+        vm.ProposalRounds.remove(proposalRound);
+        vm.save();
+    };
     // start fetching Declarations  
     getProposalRounds();
 
@@ -45,6 +86,30 @@
         }
     };
 
+    $(document).delegate(".proposalRoundAdd", "click", function () {
+        log("Adding New");
+        vm.addProposalRound();
+    });
+
+    $(document).delegate(".proposalRoundDeleter", "click", function () {
+        log("Deleting proposal round");
+        var proposalRound = ko.dataFor(this);
+        vm.deleteProposalRound(proposalRound);
+    });
+    $("#prList").delegate(".editable", "dblclick", function () {
+        $(".modal", this).modal();
+    });
+    $("#prList").delegate(".proposalRoundSaver", "click", function () {
+        log("save proposal round...:)");
+        var proposalRound = ko.dataFor(this);
+        vm.editProposalRound(proposalRound);
+    });
+
+    $("#prList").delegate(".proposalRoundCancel", "click", function () {
+        log("cancel proposal round");
+        var proposalRound = ko.dataFor(this);
+        proposalRound.entityAspect.rejectChanges();
+    });
     function saveChanges() {
         return manager.saveChanges()
           .then(function () { log("changes saved"); })
